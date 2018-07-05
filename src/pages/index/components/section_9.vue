@@ -1,5 +1,5 @@
 <template>
-  <section class="product-preview">
+  <section class="product-preview index-section">
     <div class="product-feature">
       <div class="head">
         <div class="number">

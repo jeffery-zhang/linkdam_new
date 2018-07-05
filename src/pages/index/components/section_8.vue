@@ -1,5 +1,5 @@
 <template>
-  <section class="product-preview horizontal" id="section_8">
+  <section class="product-preview horizontal index-section" id="section_8">
     <div class="product-img hide-xs">
       <img src="./assets/8_superhard.png" alt="LinkDam"/>
     </div>
