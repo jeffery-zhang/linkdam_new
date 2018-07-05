@@ -1,0 +1,75 @@
+{
+  "INDEX": {
+    "SECTION_1": {
+      "TITLE_1": "The World's First ",
+      "TITLE_2": "Bluetooth Encryption ",
+      "TITLE_3": "Hardware Wallet",
+      "FEATURE_1": "Triple Encryption",
+      "FEATURE_2": "High-density Chip+Encrypted Bluetooth+Algorithm Encryption"
+    },
+    "SECTION_2": {
+      "TITLE_1": "Support For All Currencies' ",
+      "TITLE_2": "Storage and Transaction",
+      "FEATURE_1": "Support ",
+      "FEATURE_2": "All ",
+      "FEATURE_3": "mainstream Bitcoin, Ethereum coins;",
+      "FEATURE_4": "Always support ",
+      "FEATURE_5": "New Currency;"
+    },
+    "SECTION_3": {
+      "TITLE_1": "Hardware Wallet ",
+      "TITLE_2": "Never Net",
+      "FEATURE_1": "The hardware wallet never touches the net and saves sensitive information;",
+      "FEATURE_2": "Offline ",
+      "FEATURE_3": "digital signature, ",
+      "FEATURE_4": "Multi-address ",
+      "FEATURE_5": "super protection in the same currency;"
+    },
+    "SECTION_4": {
+      "TITLE_1": "High Encryption ",
+      "TITLE_2": "Chip",
+      "FEATURE_1": "Adopt the proprietary security chip of the National Cryptographic Authority;",
+      "FEATURE_2": "Has chip ",
+      "FEATURE_3": "Attack Protection ",
+      "FEATURE_4": "function;"
+    },
+    "SECTION_5": {
+      "TITLE_1": "Attack Self-destructive ",
+      "TITLE_2": "Protection",
+      "FEATURE_1": "When attempting to ",
+      "FEATURE_2": "Crack and Attack ",
+      "FEATURE_3": "the chip, Self-destruction procedures will be initiated to ensure safety;",
+      "FEATURE_4": "Mnemonics Can Retrieve Assets On New Equipment;"
+    },
+    "SECTION_6": {
+      "TITLE_1": "Bluetooth High Encryption",
+      "FEATURE_1": "Independent protocol confidential channel, ",
+      "FEATURE_2": "Independent Channel;",
+      "FEATURE_3": "Encrypt ",
+      "FEATURE_4": "the Bluetooth chip, fast and stable;"
+    },
+    "SECTION_7": {
+      "TITLE_1": "The Charging Cable ",
+      "TITLE_2": "Never Transmits Data",
+      "FEATURE_1": "No wired data transmission, ",
+      "FEATURE_2": "Sever the attack from the channel;"
+    },
+    "SECTION_8": {
+      "TITLE_1": "The Outer Casing is Made of ",
+      "TITLE_2": "Super Hard Alloy"
+    },
+    "SECTION_9": {
+      "TITLE_1": "Comprehensive ",
+      "TITLE_2": "Digital Asset Management Tool",
+      "FEATURE_1": "Hardware wallet, ",
+      "FEATURE_2": "never touch the net;",
+      "FEATURE_3": "App side wallet, ",
+      "FEATURE_4": "Highly Encrypted;"
+    },
+    "PURCHASE": {
+      "TITLE": "立即购买链盾？",
+      "BUY": "立即购买",
+      "TOP": "返回顶部"
+    }
+  }
+}

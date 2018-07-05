@@ -1,0 +1,43 @@
+{
+  "PURCHASE": {
+    "CART": {
+      "TITLE": "购物车",
+      "PRODUCT": "产品",
+      "PRICE": "单价",
+      "QUANTITY": "数量",
+      "TOTAL": "总价",
+      "REMOVE": "移除",
+      "UPDATE": "更新",
+      "SUBTOTAL": "小计",
+      "CONTINUE": "继续购物",
+      "CHECKOUT": "结算"
+    },
+    "CONTACT": {
+      "SHIPPING": "运费",
+      "SHOW": "订单摘要",
+      "CTT": "联系",
+      "TO": "运至",
+      "DELETE": "删除",
+      "CANCEL": "取消",
+      "CONTACT": "联系方式",
+      "PHONE": "手机号",
+      "ADDRESS_INFO": "邮寄地址",
+      "NAME": "您的名字",
+      "ADDRESS": "详细地址",
+      "STREET": "街区",
+      "CITY": "城市",
+      "PROVINCE": "省份",
+      "COUNTRY": "国家",
+      "POSTAL": "邮政编码",
+      "ADD": "添加地址",
+      "CONTINUE": "前往支付",
+      "BACK": "< 返回购物车"
+    },
+    "PAYMENT": {
+      "TITLE": "选择支付方式",
+      "WECHAT": "微信支付",
+      "ALIPAY": "支付宝",
+      "SUCCEED": "支付成功"
+    }
+  }
+}

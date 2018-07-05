@@ -1,0 +1,75 @@
+{
+  "INDEX": {
+    "SECTION_1": {
+      "TITLE_1": "全球首款",
+      "TITLE_2": "蓝牙加密",
+      "TITLE_3": "硬件钱包",
+      "FEATURE_1": "三重加密",
+      "FEATURE_2": "高密芯片+加密蓝牙+算法加密"
+    },
+    "SECTION_2": {
+      "TITLE_1": "支持全币种",
+      "TITLE_2": "存储与交易",
+      "FEATURE_1": "支持",
+      "FEATURE_2": "所有",
+      "FEATURE_3": "主流比特、以太系代币；",
+      "FEATURE_4": "随时支持",
+      "FEATURE_5": "新币种；"
+    },
+    "SECTION_3": {
+      "TITLE_1": "硬件钱包",
+      "TITLE_2": "永不触网",
+      "FEATURE_1": "硬件钱包永不触网，保存敏感信息；",
+      "FEATURE_2": "离线",
+      "FEATURE_3": "数字签名，同币种",
+      "FEATURE_4": "多地址",
+      "FEATURE_5": "超级保护；"
+    },
+    "SECTION_4": {
+      "TITLE_1": "高加密",
+      "TITLE_2": "芯片",
+      "FEATURE_1": "采用国家密码管理局专有的安全芯片；",
+      "FEATURE_2": "拥有芯片",
+      "FEATURE_3": "攻击防护",
+      "FEATURE_4": "功能；"
+    },
+    "SECTION_5": {
+      "TITLE_1": "攻击自毁的",
+      "TITLE_2": "防护功能",
+      "FEATURE_1": "企图",
+      "FEATURE_2": "破解、攻击",
+      "FEATURE_3": "芯片时，将启动自毁程序，保证安全；",
+      "FEATURE_4": "助记词可在新设备找回资产；"
+    },
+    "SECTION_6": {
+      "TITLE_1": "蓝牙高度加密",
+      "FEATURE_1": "独立协议机密通道，",
+      "FEATURE_2": "独立通道",
+      "FEATURE_3": "加密",
+      "FEATURE_4": "蓝牙芯片，快速稳定；"
+    },
+    "SECTION_7": {
+      "TITLE_1": "充电线",
+      "TITLE_2": "永不传输数据",
+      "FEATURE_1": "无有线数据传输，",
+      "FEATURE_2": "从通道断绝攻击；"
+    },
+    "SECTION_8": {
+      "TITLE_1": "外壳采用",
+      "TITLE_2": "超硬合金"
+    },
+    "SECTION_9": {
+      "TITLE_1": "全方位",
+      "TITLE_2": "的数字资产管理工具",
+      "FEATURE_1": "硬件钱包，",
+      "FEATURE_2": "永不触网",
+      "FEATURE_3": "App端钱包, ",
+      "FEATURE_4": "高度加密；"
+    },
+    "PURCHASE": {
+      "TITLE": "立即购买链盾？",
+      "BUY": "立即购买",
+      "TOP": "返回顶部"
+    }
+  }
+}
