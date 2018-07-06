@@ -86,14 +86,8 @@ export default {
   },
   methods: {
     sendCaptcha() {
-      if (this.captchaSend) return;
-      console.log(this.$refs.signupForm);
-      this.$refs.signupForm.validate(valid => {
-        console.log(valid);
-        if (valid) {
-
-        }
-      })
+      if (this.captchaSend || !this.signupForm.phone) return;
+      
     },
   },
 }
