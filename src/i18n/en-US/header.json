@@ -6,7 +6,8 @@
     "HELP": "Help",
     "LOGIN": "Login",
     "WELCOME": "Welcome, ",
-    "USER": "User Center",
+    "USER": "User",
+    "CENTER": "User Center",
     "LOGOUT": "Log Out"
   }
 }

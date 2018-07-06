@@ -1,0 +1,54 @@
+@import './theme';
+
+.el-button {
+  width: 100%;
+  &.el-button--primary {
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.captcha-input {
+  .el-button {
+    width: auto;
+    background-color: $theme-color !important;
+    span {
+      color: #fff;
+    }
+    &:hover {
+      opacity: .9;
+    }
+    &:active {
+      opacity: .8;
+    }
+    &.disabled {
+      background-color: transparent !important;
+      cursor: not-allowed;
+      &:hover, &:active {
+        opacity: 1;
+      }
+      span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.server-error {
+  text-align: center;
+  font-size: 12px;
+  color: $red-color;
+}
+
+.login-form {
+  width: 300px;
+  .el-row {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .el-select {
+    width: 100px;
+    font-size: 12px;
+  }
+}

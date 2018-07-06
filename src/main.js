@@ -5,11 +5,15 @@ import Element from 'element-ui'
 import App from './App'
 import router from './router'
 
-import { i18n } from './i18n/i18n.config';
+import {
+  i18n
+} from './i18n/i18n.config';
+import store from './store';
 
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
 import 'css/global.scss'
+import 'css/common.scss'
 
 Vue.config.productionTip = false
 
@@ -20,6 +24,9 @@ new Vue({
   el: '#app',
   router,
   i18n,
-  components: { App },
+  store,
+  components: {
+    App
+  },
   template: '<App/>'
 });

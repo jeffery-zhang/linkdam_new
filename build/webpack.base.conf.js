@@ -33,6 +33,7 @@ module.exports = {
       'config': path.resolve(__dirname, '../src/config'),
       'service': path.resolve(__dirname, '../src/service'),
       'assets': path.resolve(__dirname, '../src/assets'),
+      'store': path.resolve(__dirname, '../src/store'),
     }
   },
   module: {

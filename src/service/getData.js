@@ -4,7 +4,7 @@
 
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import config from 'config/global.config';
+import config from 'config/config';
 import axiosDefault from 'config/axios.default';
 
 axiosDefault();
