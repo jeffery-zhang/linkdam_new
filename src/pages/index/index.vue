@@ -12,6 +12,9 @@
       <section_7></section_7>
       <section_8></section_8>
       <section_9></section_9>
+      <section_10></section_10>
+      <section_11></section_11>
+      <operate></operate>
     </el-main>
     <el-footer></el-footer>
   </el-container>
@@ -29,6 +32,9 @@
   import section_7 from './components/section_7'
   import section_8 from './components/section_8'
   import section_9 from './components/section_9'
+  import section_10 from './components/section_10'
+  import section_11 from './components/section_11'
+  import operate from './components/operate'
 
   export default {
     name: 'index',
@@ -44,6 +50,9 @@
       section_7,
       section_8,
       section_9,
+      section_10,
+      section_11,
+      operate,
     },
   }
 </script>

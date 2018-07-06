@@ -66,7 +66,24 @@
       "FEATURE_3": "App端钱包, ",
       "FEATURE_4": "高度加密；"
     },
-    "PURCHASE": {
+    "SECTION_10": {
+      "TITLE_1": "轻薄便携",
+      "FEATURE_1": "厚度",
+      "FEATURE_2": "2毫米",
+      "FEATURE_3": "=2张银行卡的厚度；",
+      "FEATURE_4": "面积=银行卡",
+      "FEATURE_5": "1/3；",
+      "FEATURE_6": "可放在钱包里随时交易；",
+      "FEATURE_7": "随时交易，安全携带；"
+    },
+    "SECTION_11": {
+      "TITLE_1": "链盾APP",
+      "FEATURE_1": "必须硬件配合使用，实时监控资产动态；",
+      "FEATURE_2": "非电磁波信道，信息加密传输；",
+      "FEATURE_3": "操作简洁，仅需",
+      "FEATURE_4": "2步；"
+    },
+    "OPERATE": {
       "TITLE": "立即购买链盾？",
       "BUY": "立即购买",
       "TOP": "返回顶部"
