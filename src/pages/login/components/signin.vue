@@ -29,22 +29,10 @@
 </template>
 
 <script>
-  import Cookies from 'js-cookie'
-  import {
-    mapMutations
-  } from 'vuex'
   import getData from 'service/getData'
   import postData from 'service/postData'
   import others from './others'
   import mixin from './mixin'
-  import {
-    encode,
-    decode
-  } from 'service/encryption'
-  import {
-    LOGIN_STATUS,
-    USER_ACCOUNT,
-  } from 'store/mutations-type';
 
   export default {
     name: 'signin',
@@ -70,54 +58,23 @@
           }, ],
         },
         waitForLogin: false,
-        hasServerError: false,
-        serverErrorMsg: '',
       }
     },
     methods: {
-      ...mapMutations({
-        LOGIN_STATUS,
-        USER_ACCOUNT,
-      }),
+      loginCallback(res) {
+        this.waitForLogin = false;
+        if (!res.result) {
+          this.hasServerError = true;
+          this.serverErrorMsg = res.message;
+          return;
+        }
+      },
       login() {
         this.hasServerError = false;
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-            const params = {
-              countryCode: this.countryCode,
-              phone: this.loginForm.phone,
-              password: this.loginForm.password,
-            };
             this.waitForLogin = true;
-            postData().login(params).then(res => {
-              const data = res.data;
-              this.waitForLogin = false;
-              if (!res.result) {
-                this.hasServerError = true;
-                this.serverErrorMsg = res.message;
-                return;
-              }
-              Cookies.set('isLogged', true, {
-                expires: 1
-              });
-              Cookies.set('phone', data.phone, {
-                expires: 1
-              });
-              Cookies.set('userId', data.userId, {
-                expires: 1
-              });
-              this[LOGIN_STATUS](true);
-              this[USER_ACCOUNT](this.phone);
-              const loginInfo = {
-                timestamp: new Date().valueOf(),
-                userId: data.userId,
-                token: data.xToken,
-              };
-              Cookies.set('xtoken', encode(JSON.stringify(loginInfo)));
-              this.$router.push({
-                path: '/',
-              })
-            });
+            this.signin(this.countryCode, this.loginForm.phone, this.loginForm.password, this.loginCallback);
           }
         });
       },

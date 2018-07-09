@@ -2,7 +2,10 @@
 
 .el-button {
   width: 100%;
-  &.el-button--primary {
+  &.el-button--primary, &.el-button--info {
+    i {
+      color: #fff;
+    }
     span {
       color: #fff;
     }
