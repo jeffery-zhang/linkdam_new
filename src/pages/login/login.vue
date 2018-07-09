@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .el-main {
+  position: relative;
   min-height: calc(100vh - 60px);
 }
 </style>
