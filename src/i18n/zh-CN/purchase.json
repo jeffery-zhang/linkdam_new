@@ -1,43 +1,27 @@
 {
   "PURCHASE": {
-    "CART": {
-      "TITLE": "购物车",
-      "PRODUCT": "产品",
-      "PRICE": "单价",
-      "QUANTITY": "数量",
-      "TOTAL": "总价",
-      "REMOVE": "移除",
-      "UPDATE": "更新",
-      "SUBTOTAL": "小计",
-      "CONTINUE": "继续购物",
-      "CHECKOUT": "结算"
-    },
-    "CONTACT": {
-      "SHIPPING": "运费",
-      "SHOW": "订单摘要",
-      "CTT": "联系",
-      "TO": "运至",
+    "AUCTION": {
+      "LOCAL": "当前位置：",
+      "PROD_PAGE": "产品",
+      "BUY_PAGE": "在线购买",
+      "CONFIRM_ADDR": "确认收货地址",
       "DELETE": "删除",
-      "CANCEL": "取消",
-      "CONTACT": "联系方式",
-      "PHONE": "手机号",
-      "ADDRESS_INFO": "邮寄地址",
-      "NAME": "您的名字",
+      "ADD_ADDR": "添加收货地址",
+      "COUNTRY": "所在国家",
       "ADDRESS": "详细地址",
-      "STREET": "街区",
-      "CITY": "城市",
-      "PROVINCE": "省份",
-      "COUNTRY": "国家",
-      "POSTAL": "邮政编码",
-      "ADD": "添加地址",
-      "CONTINUE": "前往支付",
-      "BACK": "< 返回购物车"
-    },
-    "PAYMENT": {
-      "TITLE": "选择支付方式",
-      "WECHAT": "微信支付",
-      "ALIPAY": "支付宝",
-      "SUCCEED": "支付成功"
+      "USER": "收货人",
+      "PHONE": "手机号码",
+      "ERR_ADDR": "请输入收货人所在的详细地址",
+      "ERR_USER": "请输入收货人名称",
+      "ERR_PHONE": "请输入收货人手机号码",
+      "SAVE": "保存地址",
+      "CONFIRM_ORDER": "确认订单信息",
+      "COLOR": "颜色：",
+      "PRICE": "单价：",
+      "SUBTOTAL": "小计：",
+      "SHIPPING": "运费：",
+      "SUM": "总计：",
+      "CONFIRM": "提交订单"
     }
   }
 }

@@ -64,7 +64,7 @@ const mixin = {
         };
         Cookies.set('xtoken', encode(JSON.stringify(loginInfo)));
         this.$router.push({
-          path: '/',
+          path: '/product',
         })
       });
     },

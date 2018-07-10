@@ -1,5 +1,5 @@
 <template>
-  <el-container v-loading.fullscreen.lock="loading">
+  <el-container direction="vertical" v-loading.fullscreen.lock="loading">
     <head-top page="index"></head-top>
     <el-main>
       <banner></banner>
@@ -16,12 +16,14 @@
       <section_11></section_11>
       <operate></operate>
     </el-main>
-    <el-footer></el-footer>
+    <!-- <el-footer></el-footer> -->
+    <foot></foot>
   </el-container>
 </template>
 
 <script>
 import headTop from 'comp/header'
+import foot from 'comp/footer'
 import banner from './components/banner'
 import section_1 from './components/section_1'
 import section_2 from './components/section_2'
@@ -40,6 +42,7 @@ export default {
   name: 'index',
   components: {
     headTop,
+    foot,
     banner,
     section_1,
     section_2,

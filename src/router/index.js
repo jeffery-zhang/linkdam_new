@@ -4,7 +4,9 @@ import Cookies from 'js-cookie'
 
 import index from 'page/index/index'
 import product from 'page/product/product'
+import purchase from 'page/purchase/purchase'
 import login from 'page/login/login'
+import auction from 'page/purchase/components/auction'
 import signin from 'page/login/components/signin'
 import signup from 'page/login/components/signup'
 import forget from 'page/login/components/forget'
@@ -22,6 +24,22 @@ const router = new Router({
       path: '/product',
       name: 'product',
       component: product,
+    },
+    {
+      path: '/purchase',
+      name: 'purchase',
+      component: purchase,
+      children: [
+        {
+          path: '/purchase',
+          redirect: '/purchase/auction',
+        },
+        {
+          path: '/purchase/auction',
+          name: 'auction',
+          component: auction,
+        },
+      ],
     },
     {
       path: '/login',

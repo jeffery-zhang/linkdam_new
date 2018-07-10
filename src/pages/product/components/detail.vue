@@ -136,7 +136,7 @@ export default {
     buy() {
       this.buyLoading = true;
       this.addToCart().then(res => {
-        console.log('buy...');
+        this.$router.push('/purchase/auction');
       });
     },
   },
