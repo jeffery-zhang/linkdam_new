@@ -61,3 +61,15 @@
     font-size: 12px;
   }
 }
+
+.thumb-gallery{
+  .swiper-container {
+    padding: 20px;
+    .swiper-slide {
+      transition: box-shadow .3s ease;
+      &.active {
+        box-shadow: 0 0px 5px 1px rgba(52, 154, 255, .8);
+      }
+    }
+  }
+}

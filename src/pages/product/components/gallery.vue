@@ -89,19 +89,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './../../../style-sheets/theme.scss';
-@import './../../../style-sheets/mixin.scss';
-
 .product-booth {
   padding: 0 20px;
-}
-.swiper-container {
-  padding: 20px;
-  .swiper-slide {
-    transition: box-shadow .3s ease;
-    &.active {
-      box-shadow: 0 0px 5px 1px rgba(52, 154, 255, .8);
-    }
-  }
 }
 </style>
