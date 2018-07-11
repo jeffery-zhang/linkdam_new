@@ -21,5 +21,7 @@ export default {
     deleteOrder: '/order/delete_order', // 删除订单
     getForgetVerifyCode: '/user/forget_pas_verify_code', // 获取忘记密码验证码
     changePassword: '/user/change_pas', // 修改密码
+    removeProduct: '/cart/delete_cart_one_product', // 删除购物车中指定的商品
+    clearCart: '/cart/delete_cart', // 清空购物车
   },
 }

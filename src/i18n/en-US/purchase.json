@@ -24,7 +24,11 @@
       "CONFIRM": "Settlement"
     },
     "CART": {
-      "TITLE": "CART"
+      "TITLE": "CART",
+      "CLEAR": "Clear Cart",
+      "REMOVED": "Product removed from shopping cart!",
+      "CLEARED": "Shopping cart cleared!",
+      "EMPTY": "The shopping cart is empty..."
     }
   }
 }
