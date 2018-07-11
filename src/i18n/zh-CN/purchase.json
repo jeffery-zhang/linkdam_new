@@ -21,7 +21,10 @@
       "SUBTOTAL": "小计：",
       "SHIPPING": "运费：",
       "SUM": "总计：",
-      "CONFIRM": "提交订单"
+      "CONFIRM": "结算"
+    },
+    "CART": {
+      "TITLE": "购物车"
     }
   }
 }

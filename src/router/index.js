@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 import index from 'page/index/index'
 import product from 'page/product/product'
 import purchase from 'page/purchase/purchase'
+import cart from 'page/cart/cart'
 import login from 'page/login/login'
 import auction from 'page/purchase/components/auction'
 import signin from 'page/login/components/signin'
@@ -42,6 +43,11 @@ const router = new Router({
       ],
     },
     {
+      path: '/cart',
+      name: 'cart',
+      component: cart,
+    },
+    {
       path: '/login',
       name: 'login',
       component: login,
@@ -76,7 +82,7 @@ router.beforeEach((to, from, next) => {
     to.path.includes('/login') ? next('/') : next();
     return;
   } else {
-    to.path.includes('/purchase') ? next('/') : next();
+    to.path.includes('/purchase') || to.path.includes('/cart') ? next('/') : next();
     return;
   }
   next();

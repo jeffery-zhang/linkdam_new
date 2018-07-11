@@ -43,7 +43,7 @@
             {{$t('PRODUCT.AMOUNT')}}
           </el-col>
           <el-col :sm="20" :xs="14" class="detail">
-            <el-input-number size="mini" v-model="count"></el-input-number>
+            <el-input-number size="mini" v-model="count" :min="1"></el-input-number>
           </el-col>
         </el-row>
       </div>
@@ -78,6 +78,7 @@ export default {
       loading: true,
       product: {},
       pickedColor: '黑色',
+      productId: 1,
       count: 1,
       buyLoading: false,
       cartLoading: false,
@@ -94,17 +95,17 @@ export default {
         setTimeout(() => {
           this.loading = false;
         }, 1000);
-        let color = res.data.color;
-        color = color.substring(1, color.length - 1).split(',');
-        color.forEach((item, index) => {
-          color[index] = item.substring(1, item.length - 1);
+        let color = [];
+        this.product = res.data[0];
+        res.data.forEach(item => {
+          color.push(item.color);
         });
-        this.product = res.data;
         this.product.color = color;
       });
     },
     pickColor(key) {
       this.pickedColor = key;
+      this.productId = key === '黑色' ? 1 : 2;
       this.$emit('pickColor', key);
     },
     addToCart() {
@@ -113,16 +114,16 @@ export default {
         return;
       }
       const params = {
-        productId: this.product.id,
-        color: this.pickedColor,
+        productId: this.productId,
         count: this.count,
       };
       return postData().addToCart(params).then(res => {
-        if (!res.result) {
-          this.$message.error(res.message);
-        }
         this.buyLoading = false;
         this.cartLoading = false;
+        if (!res.result) {
+          this.$message.error(res.message);
+          return;
+        }
         return res;
       });
     },

@@ -36,6 +36,12 @@ export default function () {
     getRegisterVerifyCode(params) {
       return postFunction(urls.registerVerifyCode, params);
     },
+    getForgetVerifyCode(params) {
+      return postFunction(urls.getForgetVerifyCode, params);
+    },
+    changePassword(params) {
+      return postFunction(urls.changePassword, params);
+    },
     verifyRegisterCode(params) {
       return postFunction(urls.verify, params);
     },

@@ -19,5 +19,7 @@ export default {
     createOrder: '/order/create', // 创建订单
     cancelOrder: '/order/cancel_order', // 取消订单
     deleteOrder: '/order/delete_order', // 删除订单
+    getForgetVerifyCode: '/user/forget_pas_verify_code', // 获取忘记密码验证码
+    changePassword: '/user/change_pas', // 修改密码
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="product-introduction">
-    <el-tabs v-model="activeTab" type="card" @tab-click="handleClick">
+    <el-tabs v-model="activeTab" type="card">
       <el-tab-pane :label="$t('PRODUCT.DETAIL')" name="detail">
         <section class="container">
           <img src="./assets/prod-assets.png" alt="LINKDAM"/>

@@ -6,7 +6,7 @@
           <el-radio v-model="selectedAddress" :label="item.id" border>
             <p>{{item.country}}</p>
             <p class="ellipsis">
-              {{item.province}},{{item.area}},{{item.street}},{{item.address}}
+              {{item.address}}
             </p>
             <p>{{item.userName}} {{item.phone}}</p>
             <el-button type="text" @click="deleteAddress(item)" :loading="item.deleting">
@@ -62,7 +62,6 @@ export default {
     },
     deleteAddress(item) {
       item.deleting = true;
-      console.log(item);
       const params = {
         addressId: item.id,
       };

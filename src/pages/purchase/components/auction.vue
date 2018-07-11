@@ -34,7 +34,7 @@ export default {
 <style lang="scss" scoped>
 .main-container {
   margin: 0 auto;
-  padding-top: 36px;
+  padding: 40px 20px 120px;
   @media only screen and (min-width: 1024px) {
     width: 980px;
   }

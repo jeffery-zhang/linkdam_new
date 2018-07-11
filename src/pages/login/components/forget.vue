@@ -28,7 +28,7 @@
         <el-input type="password" v-model="forgetForm.re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary">
+        <el-button type="primary" @click="resetPassword" :loading="resetLoading">
           {{$t('LOGIN.FORGET.TITLE')}}
         </el-button>
       </el-form-item>
@@ -56,7 +56,7 @@ export default {
     const validRepeatPassword = (rule, value, callback) => {
       if (!value) {
         callback(new Error(this.$t('LOGIN.SIGNUP.ERROR_REPWD')));
-      } else if (value !== this.signupForm.password) {
+      } else if (value !== this.forgetForm.password) {
         callback(new Error(this.$t('LOGIN.SIGNUP.ERROR_REPWD')));
       } else {
         callback();
@@ -90,6 +90,7 @@ export default {
           trigger: 'blur',
         },
       },
+      resetLoading: false,
     }
   },
   methods: {
@@ -101,7 +102,7 @@ export default {
         countryCode: this.countryCode,
         phone: this.forgetForm.phone,
       };
-      postData().getRegisterVerifyCode(params).then(res => {
+      postData().getForgetVerifyCode(params).then(res => {
         this.getVerifyLoading = false;
         if (res.code !== 1) {
           this.hasServerError = true;
@@ -115,7 +116,23 @@ export default {
       this.hasServerError = false;
       this.$refs.forgetForm.validate(valid => {
         if (valid) {
-          // @TODO
+          this.resetLoading = true;
+          const params = {
+            countryCode: this.countryCode,
+            phone: this.forgetForm.phone,
+            code: this.forgetForm.captcha,
+            pas: this.forgetForm.password,
+          };
+          postData().changePassword(params).then(res => {
+            this.resetLoading = false;
+            if (!res.result) {
+              this.$message.error(res.message);
+              return;
+            }
+            const tip = this.$t('LOGIN.FORGET.SUCCESS');
+            this.$message.success(tip);
+            this.$router.push('/login/signin');
+          });
         }
       });
     },

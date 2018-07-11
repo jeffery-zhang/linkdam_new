@@ -30,7 +30,8 @@
       "TITLE": "Reset Password",
       "CONFIRM": "Confirm",
       "NEW_PWD": "Please enter a new password",
-      "BACK": "< back"
+      "BACK": "< back",
+      "SUCCESS": "Reset password successfully!"
     }
   }
 }

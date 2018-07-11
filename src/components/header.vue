@@ -12,10 +12,11 @@
           <el-menu-item index="index">{{$t('HEADER.HOME')}}</el-menu-item>
           <el-menu-item index="product">{{$t('HEADER.PRODUCT')}}</el-menu-item>
           <el-menu-item index="signin" v-if="!isLogged">{{$t('HEADER.LOGIN')}}</el-menu-item>
+          <el-menu-item index="cart" v-if="isLogged">{{$t('PURCHASE.CART.TITLE')}}</el-menu-item>
           <el-submenu index="user" v-if="isLogged">
             <template slot="title">{{$t('HEADER.USER')}}</template>
             <el-menu-item index="userCenter">{{$t('HEADER.CENTER')}}</el-menu-item>
-            <el-menu-item index="logout" @click="logout()">{{$t('HEADER.LOGOUT')}}</el-menu-item>
+            <el-menu-item index="logout" @click="logout">{{$t('HEADER.LOGOUT')}}</el-menu-item>
           </el-submenu>
           <el-submenu index="language">
             <template slot="title">{{currentLang == 'zh-CN' ? '简体中文' : 'English'}}</template>
@@ -28,7 +29,10 @@
           <ul>
             <li @click="handleSelect('index')">{{$t('HEADER.HOME')}}</li>
             <li @click="handleSelect('product')">{{$t('HEADER.PRODUCT')}}</li>
-            <li @click="handleSelect('signin')">{{$t('HEADER.LOGIN')}}</li>
+            <li @click="handleSelect('signin')" v-if="!isLogged">{{$t('HEADER.LOGIN')}}</li>
+            <li @click="handleSelect('cart')" v-if="isLogged">{{$t('PURCHASE.CART.TITLE')}}</li>
+            <li @click="handleSelect('user')" v-if="isLogged">{{$t('HEADER.USER')}}</li>
+            <li @click="logout" v-if="isLogged">{{$t('HEADER.LOGOUT')}}</li>
             <li>
               <a href="javascript:;" :class="{active: currentLang == 'en-US'}" @click="switchLanguage('en-US')">English</a>/
               <a href="javascript:;" :class="{active: currentLang == 'zh-CN'}" @click="switchLanguage('zh-CN')">简体中文</a>
@@ -85,6 +89,7 @@
         USER_ACCOUNT,
       }),
       handleSelect(key) {
+        if (key === 'logout' || key === 'zh-CN' || key === 'en-US') return;
         this.$router.push({
           name: key,
         });

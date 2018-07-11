@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container direction="vertical">
     <head-top page="product"></head-top>
     <el-main>
       <div class="product-container">
@@ -10,12 +10,13 @@
         <introduction></introduction>
       </div>
     </el-main>
-    <el-footer></el-footer>
+    <foot></foot>
   </el-container>
 </template>
 
 <script>
 import headTop from 'comp/header'
+import foot from 'comp/footer'
 import gallery from './components/gallery'
 import detail from './components/detail'
 import introduction from './components/introduction'
@@ -24,6 +25,7 @@ export default {
   name: 'product',
   components: {
     headTop,
+    foot,
     gallery,
     detail,
     introduction,
@@ -43,12 +45,10 @@ export default {
 
 <style lang="scss" scoped>
   .el-main {
-    padding: 60px 0 100px;
-    min-height: calc(100vh - 60px);
     .product-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 20px 20px 120px;
     }
   }
 </style>

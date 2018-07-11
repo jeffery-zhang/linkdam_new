@@ -1,5 +1,11 @@
 @import './theme';
 
+.el-main {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 0 0;
+}
+
 .el-button {
   width: 100%;
   &.el-button--primary, &.el-button--info {

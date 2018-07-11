@@ -21,7 +21,10 @@
       "SUBTOTAL": "Subtotal: ",
       "SHIPPING": "Shipping: ",
       "SUM": "Sum: ",
-      "CONFIRM": "Submit"
+      "CONFIRM": "Settlement"
+    },
+    "CART": {
+      "TITLE": "CART"
     }
   }
 }

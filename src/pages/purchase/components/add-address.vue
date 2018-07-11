@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import getData from 'service/getData'
 import postData from 'service/postData'
 
@@ -33,6 +34,7 @@ export default {
   name: 'add-address',
   data () {
     return {
+      userId: Cookies.get('userId'),
       addressForm: {
         country: '',
         address: '',
@@ -73,6 +75,7 @@ export default {
         if (valid) {
           this.saving = true;
           const params = {
+            userId: this.userId,
             country: this.addressForm.country,
             address: this.addressForm.address,
             userName: this.addressForm.userName,
