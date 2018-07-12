@@ -23,6 +23,11 @@ import introduction from './components/introduction'
 
 export default {
   name: 'product',
+  beforeRouteEnter(to, from, next) {
+    next(() => {
+      scrollTo(0, 0);
+    });
+  },
   components: {
     headTop,
     foot,

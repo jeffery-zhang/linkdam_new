@@ -36,7 +36,7 @@
       <el-col :sm="{ span: 4, offset: 2 }" :xs="24">
         <h5>{{$t('FOOTER.OFFCIAL')}}</h5>
         <div class="qrcode">
-          <img src="./../assets/Subscription.png">
+          <img src="./../assets/gonzhonghao.jpg">
         </div>
       </el-col>
     </el-row>

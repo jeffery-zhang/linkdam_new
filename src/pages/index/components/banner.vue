@@ -1,6 +1,6 @@
 <template>
   <section id="banner" class="index-section">
-    <a href="/">
+    <a href="#/product">
       <img src="./assets/banner-web-EN.png" alt="LINKDAM" class="hidden-sm-and-down" v-if="currLang == 'en-US'">
       <img src="./assets/banner-web-CN.png" alt="LINKDAM" class="hidden-sm-and-down" v-if="currLang == 'zh-CN'">
       <img src="./assets/banner-mobile-EN.png" alt="LINKDAM" class="hidden-md-and-up" v-if="currLang == 'en-US'">
