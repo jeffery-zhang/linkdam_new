@@ -40,7 +40,6 @@ export default {
         }
       }
       sessionStorage.setItem('orderInfo', JSON.stringify(this.order));
-      console.log(this.order);
     },
   },
   mounted() {
