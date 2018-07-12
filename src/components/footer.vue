@@ -8,13 +8,13 @@
       <el-col :sm="3" :xs="24">
         <h5>{{$t('FOOTER.SERVICE')}}</h5>
         <p>
-          <a href="javascript:;">{{$t('FOOTER.REGISTER')}}</a>
+          <a href="#/service/registration">{{$t('FOOTER.REGISTER')}}</a>
         </p>
         <p>
-          <a href="javascript:;">{{$t('FOOTER.USE')}}</a>
+          <a href="#/service/permission">{{$t('FOOTER.USE')}}</a>
         </p>
         <p>
-          <a href="javascript:;">{{$t('FOOTER.SALE')}}</a>
+          <a href="#/service/after_sale">{{$t('FOOTER.SALE')}}</a>
         </p>
       </el-col>
       <el-col :sm="3" :xs="24">

@@ -4,10 +4,14 @@ import Cookies from 'js-cookie'
 
 import index from 'page/index/index'
 import product from 'page/product/product'
+import service from 'page/service/service'
 import purchase from 'page/purchase/purchase'
 import cart from 'page/cart/cart'
 import login from 'page/login/login'
 import auction from 'page/purchase/components/auction'
+import payment from 'page/purchase/components/payment'
+import afterSale from 'page/service/components/after_sale'
+import registration from 'page/service/components/registration'
 import signin from 'page/login/components/signin'
 import signup from 'page/login/components/signup'
 import forget from 'page/login/components/forget'
@@ -27,6 +31,27 @@ const router = new Router({
       component: product,
     },
     {
+      path: '/service',
+      name: 'service',
+      component: service,
+      children: [
+        {
+          path: '/service',
+          redirect: '/service/registration',
+        },
+        {
+          path: '/service/after_sale',
+          name: 'after_sale',
+          component: afterSale,
+        },
+        {
+          path: '/service/registration',
+          name: 'registration',
+          component: registration,
+        },
+      ],
+    },
+    {
       path: '/purchase',
       name: 'purchase',
       component: purchase,
@@ -39,6 +64,11 @@ const router = new Router({
           path: '/purchase/auction',
           name: 'auction',
           component: auction,
+        },
+        {
+          path: '/purchase/payment/:order',
+          name: 'payment',
+          component: payment,
         },
       ],
     },

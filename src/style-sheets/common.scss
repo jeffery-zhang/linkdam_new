@@ -51,13 +51,23 @@
 }
 
 .login-form {
-  width: 300px;
+  @media only screen and (max-width: 767px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 400px;
+  }
   .el-row {
     margin-bottom: 40px;
     text-align: center;
   }
   .el-select {
-    width: 100px;
+    @media only screen and (max-width: 767px) {
+      width: 100px;
+    }
+    @media only screen and (min-width: 768px) {
+      width: 120px;
+    }
     font-size: 12px;
   }
 }
@@ -70,6 +80,40 @@
       &.active {
         box-shadow: 0 0px 5px 1px rgba(52, 154, 255, .8);
       }
+    }
+  }
+}
+
+.article-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 20px 120px;
+  article {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 60px;
+    }
+    h3 {
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: normal;
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+    h4 {
+      margin-bottom: 30px;
+    }
+    p {
+      margin: 10px 0;
+      line-height: 24px;
+      font-size: 16px;
+    }
+    span {
+      display: block;
+      line-height: 24px;
+      margin: 5px 0;
+      padding-left: 28px;
     }
   }
 }

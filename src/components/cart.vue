@@ -2,11 +2,14 @@
   <div class="cart-container" v-loading.fullscreen.lock="loading">
     <div class="cart-list" v-if="products.length > 0">
       <el-row>
-        <el-button type="text" @click="clear">{{$t('PURCHASE.CART.CLEAR')}}</el-button>
+        <el-button type="text" @click="clear">
+          <i class="iconfont">&#xe639;</i>
+          {{$t('PURCHASE.CART.CLEAR')}}
+          </el-button>
       </el-row>
       <el-row v-for="product in products" class="cart-item" :key="product.id">
         <div class="delete-button hidden-md-and-up" @click="removeProduct(product.id)">
-          <i class="el-icon-circle-close"></i>
+          <i class="iconfont">&#xe642;</i>
         </div>
         <el-col :md="9" :sm="24">
           <div class="product-thumb el-col-9">
@@ -24,8 +27,9 @@
           {{$t('PURCHASE.AUCTION.COLOR')}}
           {{product.color}}
         </el-col>
-        <el-col :md="3" :sm="8" :xs="8">
-          {{$t('PURCHASE.AUCTION.PRICE') + product.price * product.discount}}            
+        <el-col :md="3" :sm="8" :xs="8" style="flex-direction: column;">
+          <p style="text-decoration: line-through;">{{$t('PURCHASE.AUCTION.PRICE') + product.price}}</p>
+          <p>{{$t('PURCHASE.AUCTION.CURR_PRICE') + product.price * product.discount}}</p>
         </el-col>
         <el-col :md="3" :sm="8" :xs="8">
           <el-input-number v-model="product.count" size="small" :min="1" @change="changeCount"></el-input-number>
@@ -35,7 +39,20 @@
           <span class="subtotal-number highlight">￥{{product.price * product.discount * product.count}}</span>
         </el-col>
         <el-col :md="3" class="hidden-sm-and-down">
-          <el-button type="text" @click="removeProduct(product.id)">{{$t('PURCHASE.AUCTION.DELETE')}}</el-button>
+          <el-button type="text" @click="removeProduct(product.id)">
+            <i class="iconfont">&#xe642;</i>
+            {{$t('PURCHASE.AUCTION.DELETE')}}
+            </el-button>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="remark-container" v-if="!!note && products.length > 0">
+      <el-row>
+        <el-col :sm="12" class="title">
+          {{$t('PURCHASE.CART.REMARK')}}
+        </el-col>
+        <el-col :sm="12">
+          <el-input type="textarea" rows="2" v-model="remark" :placeholder="$t('PURCHASE.CART.ENTER_REMARK')"></el-input>
         </el-col>
       </el-row>
     </div>
@@ -46,19 +63,21 @@
     <div class="sum" style="text-align: right;" v-if="products.length > 0">
       {{$t('PURCHASE.AUCTION.SUM')}}
       <span class="sum highlight">
-        {{sum}}
+        ￥{{sum}}
       </span>
     </div>
     <el-row style="margin-top: 20px;" v-if="products.length > 0">
       <el-col :md="{ span: 8, offset: 16 }"
               :sm="{ span: 12, offset: 12 }"
               :xs="24">
-        <el-button type="danger">
+        <el-button type="danger" @click="settlement" :loading="payLoading">
+          <i class="iconfont">&#xe630;</i>
           {{$t('PURCHASE.AUCTION.CONFIRM')}}
         </el-button>
       </el-col>
     </el-row>
     <div class="empty-cart" v-if="products.length == 0">
+      <i class="iconfont">&#xe60d;</i>
       {{$t('PURCHASE.CART.EMPTY')}}
     </div>
   </div>  
@@ -70,11 +89,16 @@ import postData from 'service/postData'
 
 export default {
   name: 'cart',
+  props: [
+    'note',
+    'payLoading',
+  ],
   data () {
     return {
       loading: false,
       products: [],
       fare: 0,
+      remark: '',
       timer: null,
     }
   },
@@ -92,7 +116,6 @@ export default {
     getCartInfo() {
       this.loading = true;
       getData().getCart().then(res => {
-        console.log(res.data);
         this.loading = false;
         this.products = res.data.product;
         this.products.forEach(item => {
@@ -145,6 +168,9 @@ export default {
         this.getCartInfo();
       });
     },
+    settlement() {
+      this.$emit('settlement', this.remark);
+    },
   },
   mounted () {
     this.getCartInfo();
@@ -191,8 +217,18 @@ export default {
       right: 10px;
       top: 10px;
       i {
-        color: $red-color;
+        color: $theme-color;
         font-size: 20px;
+      }
+    }
+  }
+  .remark-container {
+    margin: 20px 0;
+    .el-col.title {
+      margin-bottom: 10px;
+      @media only screen and (min-width: 768px) {
+        padding: 0 20px;
+        text-align: right;
       }
     }
   }
@@ -208,6 +244,11 @@ export default {
     padding: 60px 20px;
     font-size: 20px;
     text-align: center;
+    i {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 50px;
+    }
   }
 }
 </style>

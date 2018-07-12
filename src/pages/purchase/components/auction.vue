@@ -1,12 +1,7 @@
 <template>
   <div class="main-container">
     <el-row class="breadcrumb" type="flex" align="middle">
-      <el-col :sm="3" :xs="7">
-        <span style="color: #adadbd">
-          {{$t('PURCHASE.AUCTION.LOCAL')}}
-        </span>
-      </el-col>
-      <el-col :span="12">
+      <el-col>
         <el-breadcrumb separator-class="el-icon-arrow-right">
           <el-breadcrumb-item :to="{ path: '/product' }">{{$t('PURCHASE.AUCTION.PROD_PAGE')}}</el-breadcrumb-item>
           <el-breadcrumb-item>{{$t('PURCHASE.AUCTION.BUY_PAGE')}}</el-breadcrumb-item>

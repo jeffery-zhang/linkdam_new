@@ -14,6 +14,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
 import 'css/global.scss'
 import 'css/common.scss'
+import 'css/iconfont.scss'
 
 Vue.config.productionTip = false
 

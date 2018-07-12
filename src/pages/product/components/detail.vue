@@ -51,12 +51,13 @@
         <el-row>
           <el-col :span="11">
             <el-button type="primary" @click="buy" :loading="buyLoading">
+              <i class="iconfont">&#xe630;</i>
               {{$t('PRODUCT.BUY')}}
             </el-button>
           </el-col>
           <el-col :span="11" :offset="2">
             <el-button type="info" @click="add" :loading="cartLoading">
-              <i class="el-icon-goods"></i>
+              <i class="iconfont">&#xe659;</i>
               {{$t('PRODUCT.TO_CART')}}
             </el-button>
           </el-col>

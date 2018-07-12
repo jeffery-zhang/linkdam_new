@@ -17,7 +17,8 @@
       "SAVE": "Save Address",
       "CONFIRM_ORDER": "Confirm order",
       "COLOR": "Color: ",
-      "PRICE": "Unit Price: ",
+      "PRICE": "Origin Price: ",
+      "CURR_PRICE": "Current Price: ",
       "SUBTOTAL": "Subtotal: ",
       "SHIPPING": "Shipping: ",
       "SUM": "Sum: ",
@@ -26,9 +27,28 @@
     "CART": {
       "TITLE": "CART",
       "CLEAR": "Clear Cart",
+      "REMARK": "Purchase Note: ",
+      "ENTER_REMARK": "Please enter a purchase note",
       "REMOVED": "Product removed from shopping cart!",
       "CLEARED": "Shopping cart cleared!",
-      "EMPTY": "The shopping cart is empty..."
+      "EMPTY": "The shopping cart is empty...",
+      "NO_ADDR": "Please add an address to receive products!"
+    },
+    "PAYMENT": {
+      "PAY_PAGE": "Online Payment",
+      "PAY_INFO": "Order Information",
+      "SUCCESS": "Order submitted",
+      "TIME": "Submit time: ",
+      "ORDER_ID": "Order id: ",
+      "PAY_AMOUNT": "Total amount payable: ",
+      "PAY_METHOD": "Select Payment Method",
+      "WECHAT": "WeChat Pay",
+      "ALIPAY": "Alipay",
+      "WECHAT_1": "1. Please use WeChat to scan QR code to pay",
+      "WECHAT_2": "2. Enter the order id shown below in the payment note",
+      "ALIPAY_1": "1. Please use Alipay to scan QR code to pay",
+      "ALIPAY_2": "2. Enter the order id shown below in the payment note",
+      "CONFIRM": "Confirm Payment"
     }
   }
 }

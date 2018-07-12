@@ -9,6 +9,7 @@ Vue.use(Vuex);
 const state = {
   isLogged: Cookies.get('isLogged') || false,
   account: Cookies.get('phone') || false,
+  addressId: 0,
 };
 
 export default new Vuex.Store({

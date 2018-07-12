@@ -29,9 +29,13 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import getData from 'service/getData'
 import postData from 'service/postData'
 import addAddress from './add-address'
+import {
+  ADDRESS_ID,
+} from 'store/mutations-type'
 
 export default {
   name: 'address-manage',
@@ -47,12 +51,18 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({
+      ADDRESS_ID,
+    }),
     getUserAddress() {
       this.loading = true;
       this.address = [];
       getData().getAddress().then(res => {
         this.loading = false;
-        if (!res.result || !res.data || res.data.length < 1) return;
+        if (!res.result || !res.data || res.data.length < 1) {
+          this.selectedAddress = 0;
+          return;
+        };
         this.address = res.data;
         this.address.forEach(item => {
           item.deleting = false;
@@ -73,6 +83,11 @@ export default {
   },
   mounted () {
     this.getUserAddress();
+  },
+  watch: {
+    selectedAddress(nv) {
+      this[ADDRESS_ID](this.selectedAddress);
+    },
   },
 }
 </script>

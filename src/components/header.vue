@@ -7,25 +7,39 @@
             <img src="./../assets/logo.png" alt="LINKDAM">
           </a>
         </el-col>
-        <el-menu class="hidden-xs-only" background-color="#323232" mode="horizontal" text-color="#fff" @select="handleSelect" active-text-color="#349aff"
+        <el-menu class="hidden-sm-and-down" background-color="#323232" mode="horizontal" text-color="#fff" @select="handleSelect" active-text-color="#349aff"
           :default-active="page">
           <el-menu-item index="index">{{$t('HEADER.HOME')}}</el-menu-item>
           <el-menu-item index="product">{{$t('HEADER.PRODUCT')}}</el-menu-item>
+          <el-submenu index="support">
+            <template slot="title">{{$t('HEADER.SUPPORT')}}</template>
+            <el-menu-item index="registration">{{$t('FOOTER.REGISTER')}}</el-menu-item>
+            <el-menu-item index="permission">{{$t('FOOTER.USE')}}</el-menu-item>
+            <el-menu-item index="after_sale">{{$t('FOOTER.SALE')}}</el-menu-item>
+          </el-submenu>
           <el-menu-item index="signin" v-if="!isLogged">{{$t('HEADER.LOGIN')}}</el-menu-item>
-          <el-menu-item index="cart" v-if="isLogged">{{$t('PURCHASE.CART.TITLE')}}</el-menu-item>
           <el-submenu index="user" v-if="isLogged">
-            <template slot="title">{{$t('HEADER.USER')}}</template>
+            <template slot="title">
+              <i class="iconfont">&#xe6a3;</i>
+              {{$t('HEADER.USER')}}
+              </template>
             <el-menu-item index="userCenter">{{$t('HEADER.CENTER')}}</el-menu-item>
             <el-menu-item index="logout" @click="logout">{{$t('HEADER.LOGOUT')}}</el-menu-item>
           </el-submenu>
           <el-submenu index="language">
-            <template slot="title">{{currentLang == 'zh-CN' ? '简体中文' : 'English'}}</template>
+            <template slot="title">
+              <i class="iconfont">&#xe68a;</i>
+              {{currentLang == 'zh-CN' ? '简体中文' : 'English'}}
+              </template>
             <el-menu-item index="en-US" @click="switchLanguage('en-US')">English</el-menu-item>
             <el-menu-item index="zh-CN" @click="switchLanguage('zh-CN')">简体中文</el-menu-item>
           </el-submenu>
+          <el-menu-item index="cart" v-if="isLogged">
+            <i class="iconfont" style="color: #fff">&#xe659;</i>
+          </el-menu-item>
         </el-menu>
-        <a href="javascript:;" class="nav-button hidden-sm-and-up" :class="{open: showXsNav, close: !showXsNav}" @click="showXsNav = !showXsNav"></a>
-        <div class="mobile-nav" :class="{closed: !showXsNav}">
+        <a href="javascript:;" class="nav-button hidden-md-and-up" :class="{open: showXsNav, close: !showXsNav}" @click="showXsNav = !showXsNav"></a>
+        <div class="mobile-nav hidden-md-and-up" :class="{closed: !showXsNav}">
           <ul>
             <li @click="handleSelect('index')">{{$t('HEADER.HOME')}}</li>
             <li @click="handleSelect('product')">{{$t('HEADER.PRODUCT')}}</li>
@@ -131,6 +145,17 @@
               border-bottom-color: $theme-color !important;
               background-color: transparent !important;
               color: $theme-color !important;
+              i {
+                color: $theme-color !important;
+              }
+            }
+            i {
+              color: #fff !important;
+            }
+          }
+          .el-submenu {
+            i {
+              color: #fff;
             }
           }
         }

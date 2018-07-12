@@ -5,8 +5,14 @@
         {{$t('INDEX.OPERATE.TITLE')}}
       </el-col>
       <el-col :lg="12" class="btn-group">
-        <a href="#/product" class="operate-button buy">{{$t('INDEX.OPERATE.BUY')}}</a>
-        <a href="javascript: scrollTo(0, 0);" class="operate-button top">{{$t('INDEX.OPERATE.TOP')}}</a>
+        <a href="#/product" class="operate-button buy">
+        <i class="iconfont">&#xe630;</i>
+        {{$t('INDEX.OPERATE.BUY')}}
+        </a>
+        <a href="javascript: scrollTo(0, 0);" class="operate-button top">
+          <i class="iconfont">&#xe65f;</i>
+          {{$t('INDEX.OPERATE.TOP')}}
+          </a>
       </el-col>
     </el-col>
   </el-row>

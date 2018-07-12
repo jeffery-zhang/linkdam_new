@@ -1,6 +1,7 @@
 import {
   LOGIN_STATUS,
   USER_ACCOUNT,
+  ADDRESS_ID,
 } from './mutations-type';
 
 export default {
@@ -9,5 +10,8 @@ export default {
   },
   [USER_ACCOUNT](state, account) {
     state.account = account;
+  },
+  [ADDRESS_ID](state, id) {
+    state.addressId = id;
   },
 };

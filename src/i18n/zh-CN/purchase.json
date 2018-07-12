@@ -17,7 +17,8 @@
       "SAVE": "保存地址",
       "CONFIRM_ORDER": "确认订单信息",
       "COLOR": "颜色：",
-      "PRICE": "单价：",
+      "PRICE": "原价：",
+      "CURR_PRICE": "现价：",
       "SUBTOTAL": "小计：",
       "SHIPPING": "运费：",
       "SUM": "总计：",
@@ -26,9 +27,28 @@
     "CART": {
       "TITLE": "购物车",
       "CLEAR": "清空购物车",
+      "REMARK": "购买备注：",
+      "ENTER_REMARK": "请输入备注信息",
       "REMOVED": "已删除购物车中的商品",
       "CLEARED": "已清空购物车",
-      "EMPTY": "购物车空空如也..."
+      "EMPTY": "购物车空空如也...",
+      "NO_ADDR": "请添加收货地址!"
+    },
+    "PAYMENT": {
+      "PAY_PAGE": "在线支付",
+      "PAY_INFO": "订单信息",
+      "SUCCESS": "订单提交成功",
+      "TIME": "提交时间：",
+      "ORDER_ID": "订单号：",
+      "PAY_AMOUNT": "应付总金额：",
+      "PAY_METHOD": "选择支付方式",
+      "WECHAT": "微信支付",
+      "ALIPAY": "支付宝",
+      "WECHAT_1": "1. 请使用微信扫描二维码支付",
+      "WECHAT_2": "2. 在付款备注中输入下方显示的订单号",
+      "ALIPAY_1": "1. 请使用支付宝扫描二维码支付",
+      "ALIPAY_2": "2. 在付款备注中输入下方显示的订单号",
+      "CONFIRM": "确认支付"
     }
   }
 }
