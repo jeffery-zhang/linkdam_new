@@ -57,7 +57,7 @@
         </el-collapse>
         <el-row>
           <el-col :md="6" :sm="12" style="margin-top: 20px;">
-            <el-button type="primary">
+            <el-button type="primary" @click="confirmPayment" :loading="confirming">
               {{$t('PURCHASE.PAYMENT.CONFIRM')}}              
             </el-button>
           </el-col>
@@ -68,14 +68,18 @@
 </template>
 
 <script>
+import postData from 'service/postData'
+
 export default {
   name: 'pay-method',
   props: [
     'orderId',
+    'id',
   ],
   data () {
     return {
       method: 1,
+      confirming: false,
     }
   },
   methods: {
@@ -102,6 +106,21 @@ export default {
             });
         }
       }, '#paypal-btn');
+    },
+    confirmPayment() {
+      this.confirming = true;
+      const params = {
+        orderId: this.id,
+      };
+      postData().payOrder(params).then(res => {
+        console.log(res);
+        this.confirming = false;
+        if (!res.result) {
+          this.$message.error(res.message);
+          return;
+        }
+        this.$router.push('/purchase/success');
+      });
     },
   },
   mounted () {

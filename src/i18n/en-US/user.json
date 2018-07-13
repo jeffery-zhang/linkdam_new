@@ -1,0 +1,25 @@
+{
+  "USER": {
+    "TITLE": "User Center",
+    "ADDR_MANAGE": "Address Manage",
+    "ORDER_MANAGE": "Order Manage",
+    "ORDER_ID": "Order id: ",
+    "RECEIVER": "Receiver: ",
+    "STATUS": "Status: ",
+    "STATUS_1": "Order created",
+    "STATUS_2": "Paid, waiting for confirmation",
+    "STATUS_3": "Confirmed, waiting for delivery",
+    "STATUS_4": "User canceled",
+    "STATUS_5": "Delivered",
+    "INOPERABLE": "Inoperable",
+    "CANCEL": "Cancel Order",
+    "DELETE": "Delete Order",
+    "DETAIL": "Order Detail",
+    "SUM": "Actual payment: ",
+    "DISCOUNT": "Discount: ",
+    "PHONE": "Contact: ",
+    "ADDRESS": "Shipping address",
+    "CANCEL_OK": "Cancel order successful",
+    "DELETE_OK": "Delete order successful"
+  }
+}

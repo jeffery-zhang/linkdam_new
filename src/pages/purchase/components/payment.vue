@@ -10,7 +10,7 @@
       </el-col>
     </el-row>
     <pay-info :order="order"></pay-info>
-    <pay-method :order-id="order.orderId"></pay-method>
+    <pay-method :order-id="order.orderId" :id="order.id"></pay-method>
   </div>
 </template>
 

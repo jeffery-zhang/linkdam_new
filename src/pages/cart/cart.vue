@@ -8,7 +8,7 @@
             {{$t('PURCHASE.CART.TITLE')}}
           </h1>
         </el-row>
-        <cart></cart>
+        <cart @settlement="toPayment"></cart>
       </div>
     </el-main>
     <foot></foot>
@@ -26,6 +26,11 @@ export default {
     headTop,
     foot,
     cart,
+  },
+  methods: {
+    toPayment() {
+      this.$router.push('/purchase/auction');
+    },
   },
 }
 </script>

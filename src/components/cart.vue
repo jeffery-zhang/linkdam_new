@@ -78,7 +78,8 @@
     </el-row>
     <div class="empty-cart" v-if="products.length == 0">
       <i class="iconfont">&#xe60d;</i>
-      {{$t('PURCHASE.CART.EMPTY')}}
+      {{$t('PURCHASE.CART.EMPTY')}}<br>
+      <a href="#/product" class="shop">{{$t('PURCHASE.CART.SHOPPING')}}</a>
     </div>
   </div>  
 </template>
@@ -186,12 +187,15 @@ export default {
   .cart-list {
     padding: 30px 0;
     .cart-item {
+      display: flex;
+      align-items: center;
       padding: 30px 0;
       border-bottom: 1px solid $light-border;
     }
     .el-col {
       display: flex;
       justify-content: center;
+      align-items: center;
       height: 100%;
       margin: 10px 0;
       font-size: 14px;
@@ -207,9 +211,6 @@ export default {
           font-size: 20px;
           font-weight: bold;
         }
-      }
-      .el-button {
-        padding: 6px 0 0;
       }
     }
     .delete-button {
@@ -248,6 +249,10 @@ export default {
       display: block;
       margin-bottom: 20px;
       font-size: 50px;
+    }
+    .shop {
+      margin-top: 40px;
+      color: $theme-color;
     }
   }
 }

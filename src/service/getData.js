@@ -41,5 +41,8 @@ export default function () {
     getAddress() {
       return getFunction(urls.getAddress, {}, true);
     },
+    getOrders() {
+      return getFunction(urls.getOrders, {}, true);
+    },
   }
 }

@@ -14,8 +14,8 @@
             </el-button>
           </el-radio>
         </div>
-        <el-collapse>
-          <el-collapse-item>
+        <el-collapse v-model="collapse" accordion>
+          <el-collapse-item name="1">
             <template slot="title" style="color: #303133;">
               <i class="el-icon-location-outline" style="color: #349aff;"></i>
               {{$t('PURCHASE.AUCTION.ADD_ADDR')}}
@@ -32,7 +32,7 @@
 import { mapMutations } from 'vuex';
 import getData from 'service/getData'
 import postData from 'service/postData'
-import addAddress from './add-address'
+import addAddress from 'comp/add-address'
 import {
   ADDRESS_ID,
 } from 'store/mutations-type'
@@ -46,6 +46,7 @@ export default {
     return {
       address: [],
       selectedAddress: 0,
+      collapse: '0',
       loading: false,
       deleting: false,
     }
@@ -57,6 +58,7 @@ export default {
     getUserAddress() {
       this.loading = true;
       this.address = [];
+      this.collapse = '0';
       getData().getAddress().then(res => {
         this.loading = false;
         if (!res.result || !res.data || res.data.length < 1) {

@@ -32,7 +32,8 @@
       "REMOVED": "Product removed from shopping cart!",
       "CLEARED": "Shopping cart cleared!",
       "EMPTY": "The shopping cart is empty...",
-      "NO_ADDR": "Please add an address to receive products!"
+      "NO_ADDR": "Please add an address to receive products!",
+      "SHOPPING": "Go Shopping >"
     },
     "PAYMENT": {
       "PAY_PAGE": "Online Payment",
@@ -48,7 +49,11 @@
       "WECHAT_2": "2. Enter the order id shown below in the payment note",
       "ALIPAY_1": "1. Please use Alipay to scan QR code to pay",
       "ALIPAY_2": "2. Enter the order id shown below in the payment note",
-      "CONFIRM": "Confirm Payment"
+      "CONFIRM": "Confirm Payment",
+      "SUCCEED": "Payment Successful",
+      "TIP": "Customer service will confirm the order information with you within 24 hours.",
+      "ORDER": "Check Orders",
+      "INDEX": "Home"
     }
   }
 }

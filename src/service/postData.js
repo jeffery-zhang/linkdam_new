@@ -66,5 +66,14 @@ export default function () {
     clearCart() {
       return postFunction(urls.clearCart, {}, true);
     },
+    cancelOrder(params) {
+      return postFunction(urls.cancelOrder, params, true);
+    },
+    deleteOrder(params) {
+      return postFunction(urls.deleteOrder, params, true);
+    },
+    payOrder(params) {
+      return postFunction(urls.payOrder, params, true);
+    },
   };
 };
