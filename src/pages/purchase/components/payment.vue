@@ -20,6 +20,11 @@ import payMethod from './pay-method'
 
 export default {
   name: 'payment',
+  beforeRouteEnter(to, from, next) {
+    next(() => {
+      scrollTo(0, 0);
+    });
+  },
   components: {
     payInfo,
     payMethod,
