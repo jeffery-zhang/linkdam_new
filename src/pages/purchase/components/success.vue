@@ -25,6 +25,11 @@
 <script>
 export default {
   name: 'success',
+  beforeRouteEnter(to, from, next) {
+    next(() => {
+      scrollTo(0, 0);
+    });
+  },
   methods: {
     goPage(name) {
       this.$router.push({

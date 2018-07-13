@@ -17,7 +17,7 @@
           </p>
           <p>{{item.userName}} {{item.phone}}</p>
           <el-button type="text" @click="deleteAddress(item)" :loading="item.deleting">
-            {{$t('PURCHASE.AUCTION.DELETE')}}
+            <i class="el-icon-close"></i>
           </el-button>
         </div>
       </el-col>
@@ -112,13 +112,11 @@ export default {
         box-shadow: 0 0px 10px 1px rgba(172, 173, 173, 0.8);
         .el-button {
           position: absolute;
-          right: 3px;
-          top: 5px;
-          width: 60px;
+          right: 6px;
+          top: 6px;
+          width: auto;
           padding: 0;
-          &.el-button--text {
-            color: $theme-color;
-          }
+          font-size: 20px;
         }
       }
     }

@@ -2,18 +2,20 @@
   <section class="address-manage" v-loading.fullscreen.lock="loading">
     <el-tabs>
       <el-tab-pane :label="$t('PURCHASE.AUCTION.CONFIRM_ADDR')">
-        <div v-for="(item, index) in address" :key="index" class="address-item">
-          <el-radio v-model="selectedAddress" :label="item.id" border>
-            <p>{{item.country}}</p>
-            <p class="ellipsis">
-              {{item.address}}
-            </p>
-            <p>{{item.userName}} {{item.phone}}</p>
-            <el-button type="text" @click="deleteAddress(item)" :loading="item.deleting">
-              {{$t('PURCHASE.AUCTION.DELETE')}}
-            </el-button>
-          </el-radio>
-        </div>
+        <el-row class="address-list">
+          <el-col :md="8" :sm="12" :xs="24" v-for="(item, index) in address" :key="index" class="address-item">
+            <el-radio v-model="selectedAddress" :label="item.id" border>
+              <p>{{item.country}}</p>
+              <p class="ellipsis">
+                {{item.address}}
+              </p>
+              <p>{{item.userName}} {{item.phone}}</p>
+              <el-button type="text" @click="deleteAddress(item)" :loading="item.deleting">
+                {{$t('PURCHASE.AUCTION.DELETE')}}
+              </el-button>
+            </el-radio>
+          </el-col>
+        </el-row>
         <el-collapse v-model="collapse" accordion>
           <el-collapse-item name="1">
             <template slot="title" style="color: #303133;">
@@ -99,6 +101,9 @@ export default {
 @import './../../../style-sheets/mixin';
 
 .address-manage {
+  .address-item {
+    padding: 10px;
+  }
   .el-radio.is-bordered {
     display: flex;
     position: relative;

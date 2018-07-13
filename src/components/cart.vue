@@ -189,6 +189,7 @@ export default {
     .cart-item {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       padding: 30px 0;
       border-bottom: 1px solid $light-border;
     }
@@ -241,7 +242,6 @@ export default {
     }
   }
   .empty-cart {
-    height: 200px;
     padding: 60px 20px;
     font-size: 20px;
     text-align: center;
