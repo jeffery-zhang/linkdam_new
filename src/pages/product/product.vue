@@ -7,7 +7,7 @@
           <gallery :color="color"></gallery>
           <detail @pickColor="changeColor"></detail>  
         </el-row>
-        <introduction></introduction>
+        <!-- <introduction></introduction> -->
       </div>
     </el-main>
     <foot></foot>

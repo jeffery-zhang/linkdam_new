@@ -93,9 +93,7 @@ export default {
   methods: {
     getProductInfo() {
       getData().getProductInfo().then(res => {
-        setTimeout(() => {
-          this.loading = false;
-        }, 1000);
+        this.loading = false;
         let color = [];
         this.product = res.data[0];
         res.data.forEach(item => {

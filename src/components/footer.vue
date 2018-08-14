@@ -81,6 +81,7 @@ export default {
     padding-bottom: 6px;
     border-bottom: 1px solid $grey-border;
     font-size: 14px;
+    color: #666;
     &:not(:first-of-type) {
       margin-top: 20px;
     }
