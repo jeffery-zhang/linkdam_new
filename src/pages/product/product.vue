@@ -2,7 +2,7 @@
   <el-container direction="vertical">
     <head-top page="product"></head-top>
     <el-main>
-      <div class="product-container">
+      <div class="product-container" style="overflow:hidden">
         <el-row>
           <gallery :color="color"></gallery>
           <detail @pickColor="changeColor"></detail>  

@@ -8,15 +8,16 @@
         <p>{{product.englishTitle}}</p>
       </div>
       <div class="product-price">
-        <el-row class="origin">
+        <el-row class="origin" type="flex" align="middle">
           <el-col :sm="4" :xs="10" class="label">
             {{$t('PRODUCT.PRICE')}}
           </el-col>
-          <el-col :sm="20" :xs="14" class="detail" :class="{delete: !!product.discount}">
+          <el-col :sm="20" :xs="14" class="detail" :class="{delete: product.discount < 1, sale: product.discount == 1}">
             ￥{{product.price}}
           </el-col>
+          <img class="preorder-img" src="./assets/preorder.png" v-if="product.newProduct">
         </el-row>
-        <el-row class="sale" type="flex" align="middle" v-show="product.discount">
+        <el-row class="sale" type="flex" align="middle" v-show="product.discount < 1">
           <el-col :sm="4" :xs="10" class="label">
             {{$t('PRODUCT.SALE')}}
           </el-col>
@@ -24,6 +25,9 @@
             ￥{{product.price * product.discount}}
           </el-col>
         </el-row>
+      </div>
+      <div class="detail-desc">
+        <p>{{$t('PRODUCT.PREORDER')}}</p>
       </div>
       <div class="options">
         <el-row class="color" type="flex" align="middle">
@@ -203,5 +207,11 @@ export default {
       margin: 10px 0;
     }
   }
+}
+.preorder-img {
+  position: absolute;
+  right: -50px;
+  top: -80px;
+  @include wh(150px, 150px);
 }
 </style>
