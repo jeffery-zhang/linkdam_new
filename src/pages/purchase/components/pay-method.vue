@@ -43,7 +43,7 @@
                 </p>
               </el-col>
               <el-col :span="9">
-                <img src="./assets/wx-qrcode.png">
+                <img src="./assets/ali-qrcode.png">
               </el-col>
             </el-row>
           </el-collapse-item>
