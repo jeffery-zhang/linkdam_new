@@ -38,7 +38,7 @@
             <el-radio-group size="small" v-model="pickedColor">
               <el-radio v-for="(item, index) in product.color" 
                         :key="index" border 
-                        :label="item">{{item}}</el-radio>
+                        :label="item.name">{{lang === 'zh-CN' ? item.name : item.enName}}</el-radio>
             </el-radio-group>
           </el-col>
         </el-row>
@@ -102,7 +102,11 @@ export default {
         let color = [];
         this.product = res.data[0];
         res.data.forEach(item => {
-          color.push(item.color);
+          const obj = {
+            name: item.color,
+            enName: item.color === '黑色' ? 'black' : 'white',
+          };
+          color.push(obj);
         });
         this.product.color = color;
       });
