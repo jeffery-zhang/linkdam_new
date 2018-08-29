@@ -1,7 +1,7 @@
 {
   "PRODUCT": {
     "PRICE": "Price",
-    "SALE": "Sale",
+    "SALE": "Pre-sale price",
     "COLOR": "Color",
     "AMOUNT": "Amount",
     "BUY": "Preorder NOW!",

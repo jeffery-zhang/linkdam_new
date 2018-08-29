@@ -3,7 +3,7 @@
     <div class="product-feature">
       <div class="head">
         <div class="number">
-          <img src="./assets/10.png"/>
+          <img src="./assets/08.png"/>
         </div>
         <div class="feature">
           <p class="en-feature">

@@ -8,51 +8,51 @@
       "FEATURE_2": "高密芯片+加密蓝牙+算法加密"
     },
     "SECTION_2": {
-      "TITLE_1": "支持全币种",
-      "TITLE_2": "存储与交易",
-      "FEATURE_1": "支持",
-      "FEATURE_2": "所有",
-      "FEATURE_3": "主流比特、以太系代币；",
-      "FEATURE_4": "随时支持",
-      "FEATURE_5": "新币种；"
+      "TITLE_1": "计划支持",
+      "TITLE_2": "全币种",
+      "FEATURE_1": "",
+      "FEATURE_2": "BTC、ETH、ETC、LTC、DASH、DOGE及ERC20",
+      "FEATURE_3": "所有代币",
+      "FEATURE_4": "计划支持",
+      "FEATURE_5": "全币种"
     },
     "SECTION_3": {
-      "TITLE_1": "硬件钱包",
-      "TITLE_2": "永不触网",
-      "FEATURE_1": "硬件钱包永不触网，保存敏感信息；",
-      "FEATURE_2": "离线",
-      "FEATURE_3": "数字签名，同币种",
-      "FEATURE_4": "多地址",
-      "FEATURE_5": "超级保护；"
+      "TITLE_1": "硬件钱包永不触网",
+      "TITLE_2": "",
+      "FEATURE_1": "交易离线签名",
+      "FEATURE_2": "",
+      "FEATURE_3": "私钥加密存储 ",
+      "FEATURE_4": "永不触网",
+      "FEATURE_5": ""
     },
     "SECTION_4": {
       "TITLE_1": "高加密",
       "TITLE_2": "芯片",
-      "FEATURE_1": "采用国家密码管理局专有的安全芯片；",
-      "FEATURE_2": "拥有芯片",
-      "FEATURE_3": "攻击防护",
-      "FEATURE_4": "功能；"
+      "FEATURE_1": "采用国家密码管理局专有安全芯片",
+      "FEATURE_2": "业界",
+      "FEATURE_3": "最佳安全性",
+      "FEATURE_4": "的ARM® CryptoCell-310加速器"
     },
     "SECTION_5": {
-      "TITLE_1": "攻击自毁的",
-      "TITLE_2": "防护功能",
-      "FEATURE_1": "企图",
-      "FEATURE_2": "破解、攻击",
-      "FEATURE_3": "芯片时，将启动自毁程序，保证安全；",
-      "FEATURE_4": "助记词可在新设备找回资产；"
+      "TITLE_1": "硬件智能防护",
+      "TITLE_2": "",
+      "FEATURE_1": "当遭遇攻击 硬件",
+      "FEATURE_2": "启动自毁功能",
+      "FEATURE_3": "",
+      "FEATURE_4": "防调试攻击 防暴力破解"
     },
     "SECTION_6": {
       "TITLE_1": "蓝牙高度加密",
-      "FEATURE_1": "独立协议机密通道，",
-      "FEATURE_2": "独立通道",
-      "FEATURE_3": "加密",
-      "FEATURE_4": "蓝牙芯片，快速稳定；"
+      "FEATURE_1": "",
+      "FEATURE_2": "蓝牙5.0BLE",
+      "FEATURE_3": "加密蓝牙芯片 ",
+      "FEATURE_4": "快速稳定"
     },
     "SECTION_7": {
       "TITLE_1": "充电线",
       "TITLE_2": "永不传输数据",
-      "FEATURE_1": "无有线数据传输，",
-      "FEATURE_2": "从通道断绝攻击；"
+      "FEATURE_1": "无有线数据传输 ",
+      "FEATURE_2": "从通道断绝攻击"
     },
     "SECTION_8": {
       "TITLE_1": "外壳采用",
@@ -68,20 +68,20 @@
     },
     "SECTION_10": {
       "TITLE_1": "轻薄便携",
-      "FEATURE_1": "厚度",
-      "FEATURE_2": "2毫米",
-      "FEATURE_3": "=2张银行卡的厚度；",
+      "FEATURE_1": "薄至",
+      "FEATURE_2": "2.5毫米",
+      "FEATURE_3": "",
       "FEATURE_4": "面积=银行卡",
-      "FEATURE_5": "1/3；",
-      "FEATURE_6": "可放在钱包里随时交易；",
-      "FEATURE_7": "随时交易，安全携带；"
+      "FEATURE_5": "1/3",
+      "FEATURE_6": "",
+      "FEATURE_7": "安全携带 随时交易"
     },
     "SECTION_11": {
       "TITLE_1": "链盾APP",
-      "FEATURE_1": "必须硬件配合使用，实时监控资产动态；",
-      "FEATURE_2": "非电磁波信道，信息加密传输；",
-      "FEATURE_3": "操作简洁，仅需",
-      "FEATURE_4": "2步；"
+      "FEATURE_1": "配合硬件使用 实时监控资产动态",
+      "FEATURE_2": "冷热端分离架构 冷端签名热端广播",
+      "FEATURE_3": "",
+      "FEATURE_4": ""
     },
     "OPERATE": {
       "TITLE": "立即购买链盾？",

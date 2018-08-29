@@ -15,8 +15,8 @@
         </div>
       </div>
       <div class="others">
-        <p>{{$t('INDEX.SECTION_6.FEATURE_1')}}<span>{{$t('INDEX.SECTION_6.FEATURE_2')}}</span>；</p>
-        <p><span>{{$t('INDEX.SECTION_6.FEATURE_3')}}</span>{{$t('INDEX.SECTION_6.FEATURE_4')}}</p>
+        <p><span>{{$t('INDEX.SECTION_6.FEATURE_2')}}</span></p>
+        <p><span>{{$t('INDEX.SECTION_6.FEATURE_3')}}</span> {{$t('INDEX.SECTION_6.FEATURE_4')}}</p>
       </div>
     </div>
     <div class="product-img">

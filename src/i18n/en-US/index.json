@@ -8,30 +8,30 @@
       "FEATURE_2": "High-density Chip+Encrypted Bluetooth+Algorithm Encryption"
     },
     "SECTION_2": {
-      "TITLE_1": "Support For All Currencies' ",
-      "TITLE_2": "Storage and Transaction",
-      "FEATURE_1": "Support ",
-      "FEATURE_2": "All ",
-      "FEATURE_3": "mainstream Bitcoin, Ethereum coins;",
-      "FEATURE_4": "Always support ",
-      "FEATURE_5": "New Currency;"
+      "TITLE_1": "Support For All Currencies",
+      "TITLE_2": "",
+      "FEATURE_1": "",
+      "FEATURE_2": "BTC, ETH, ETC, LTC, DASH, DOGE and ERC20 ",
+      "FEATURE_3": "all tokens",
+      "FEATURE_4": "Plan to support ",
+      "FEATURE_5": "All Currencies"
     },
     "SECTION_3": {
-      "TITLE_1": "Hardware Wallet ",
-      "TITLE_2": "Never Net",
-      "FEATURE_1": "The hardware wallet never touches the net and saves sensitive information;",
-      "FEATURE_2": "Offline ",
-      "FEATURE_3": "digital signature, ",
-      "FEATURE_4": "Multi-address ",
-      "FEATURE_5": "super protection in the same currency;"
+      "TITLE_1": "Hardware Wallet Never Net",
+      "TITLE_2": "",
+      "FEATURE_1": "Transaction Offline Signature",
+      "FEATURE_2": "",
+      "FEATURE_3": "Private key encryption storage and ",
+      "FEATURE_4": "Never Net",
+      "FEATURE_5": ""
     },
     "SECTION_4": {
       "TITLE_1": "High Encryption ",
       "TITLE_2": "Chip",
-      "FEATURE_1": "Adopt the proprietary security chip of the National Cryptographic Authority;",
-      "FEATURE_2": "Has chip ",
-      "FEATURE_3": "Attack Protection ",
-      "FEATURE_4": "function;"
+      "FEATURE_1": "Adopt the proprietary security chip of the National Cryptographic Authority",
+      "FEATURE_2": "Industry's ",
+      "FEATURE_3": "Best Security ",
+      "FEATURE_4": "ARM® CryptoCell-310 Accelerator"
     },
     "SECTION_5": {
       "TITLE_1": "Attack Self-destructive ",
@@ -43,10 +43,10 @@
     },
     "SECTION_6": {
       "TITLE_1": "Bluetooth High Encryption",
-      "FEATURE_1": "Independent protocol confidential channel, ",
-      "FEATURE_2": "Independent Channel;",
-      "FEATURE_3": "Encrypt ",
-      "FEATURE_4": "the Bluetooth chip, fast and stable;"
+      "FEATURE_1": "",
+      "FEATURE_2": "Bluetooth 5.0BLE",
+      "FEATURE_3": "Encrypted Bluetooth Chip  ",
+      "FEATURE_4": "Fast and stable"
     },
     "SECTION_7": {
       "TITLE_1": "The Charging Cable ",
@@ -69,17 +69,17 @@
     "SECTION_10": {
       "TITLE_1": "Light and Portable",
       "FEATURE_1": "Thickness ",
-      "FEATURE_2": "2 mm ",
-      "FEATURE_3": "= thickness of 2 bank cards;",
+      "FEATURE_2": "2.5 mm ",
+      "FEATURE_3": "",
       "FEATURE_4": "Area = ",
-      "FEATURE_5": "1/3 of the bank card;",
-      "FEATURE_6": "Can be traded at any time in the wallet;",
-      "FEATURE_7": "Trade at any time and carry it safely;"
+      "FEATURE_5": "1/3 of the Bank Card",
+      "FEATURE_6": "",
+      "FEATURE_7": "Trade at any time and carry it safely"
     },
     "SECTION_11": {
       "TITLE_1": "LINKDAM APP",
-      "FEATURE_1": "Must use hardware to monitor asset dynamics in real time;",
-      "FEATURE_2": "Non-electromagnetic wave channel, information encryption transmission;",
+      "FEATURE_1": "Must use hardware to monitor asset dynamics in real time",
+      "FEATURE_2": "Non-electromagnetic wave channel, information encryption transmission",
       "FEATURE_3": "Simple operation, only ",
       "FEATURE_4": "2 steps;"
     },

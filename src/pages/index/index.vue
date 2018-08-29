@@ -10,8 +10,8 @@
       <section_5></section_5>
       <section_6></section_6>
       <section_7></section_7>
-      <section_8></section_8>
-      <section_9></section_9>
+      <!-- <section_8></section_8>
+      <section_9></section_9> -->
       <section_10></section_10>
       <section_11></section_11>
       <operate></operate>
@@ -59,10 +59,11 @@ export default {
   },
   data () {
     return {
-      loading: true,
+      loading: false,
     }
   },
   mounted() {
+    this.loading = true;
     setTimeout(() => {
       this.loading = false;
     }, 800);
