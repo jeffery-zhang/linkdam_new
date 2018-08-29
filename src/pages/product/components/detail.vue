@@ -2,27 +2,27 @@
   <el-col :sm="12" :xs="24" v-loading.fullscreen.lock="loading">
     <div class="product-detail">
       <div class="detail-hd">
-        <h1>{{product.title}}</h1>
+        <h1>{{lang === 'zh-CN' ? product.title : product.englishTitle}}</h1>
       </div>
       <div class="detail-desc">
-        <p>{{product.englishTitle}}</p>
+        <p>{{lang === 'zh-CN' ? product.description : product.englishDescription}}</p>
       </div>
       <div class="product-price">
         <el-row class="origin" type="flex" align="middle">
-          <el-col :sm="4" :xs="10" class="label">
+          <el-col :sm="8" :xs="10" class="label">
             {{$t('PRODUCT.PRICE')}}
           </el-col>
-          <el-col :sm="20" :xs="14" class="detail" :class="{delete: product.discount < 1, sale: product.discount == 1}">
+          <el-col :sm="20" :xs="14" class="detail" :class="{delete: product.discountPrice, sale: !product.discountPrice}">
             ￥{{product.price}}
           </el-col>
           <img class="preorder-img" src="./assets/preorder.png" v-if="product.newProduct">
         </el-row>
-        <el-row class="sale" type="flex" align="middle" v-show="product.discount < 1">
-          <el-col :sm="4" :xs="10" class="label">
+        <el-row class="sale" type="flex" align="middle" v-show="product.discountPrice">
+          <el-col :sm="8" :xs="10" class="label">
             {{$t('PRODUCT.SALE')}}
           </el-col>
           <el-col :sm="20" :xs="14" class="detail sale">
-            ￥{{product.price * product.discount}}
+            ￥{{product.discountPrice}}
           </el-col>
         </el-row>
       </div>
@@ -81,6 +81,7 @@ export default {
   data () {
     return {
       loading: true,
+      lang: localStorage.getItem('_lang'),
       product: {},
       pickedColor: '黑色',
       productId: 1,
