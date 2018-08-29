@@ -15,7 +15,7 @@
         </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="loginForm.password" :placeholder="$t('LOGIN.SIGNIN.PASSWORD')"></el-input>
+        <el-input type="password" v-model="loginForm.password" :placeholder="$t('LOGIN.SIGNIN.PASSWORD')" @keyup.enter.native="login"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="login" :loading="waitForLogin">

@@ -18,25 +18,25 @@
           </div>
           <div class="product-detail">
             <h4>
-              {{product.title}}
+              {{lang === 'zh-CN' ? product.title : product.englishTitle}}
             </h4>
-            <p class="ellipsis" style="width:100%;">{{product.englishTitle}}</p>
+            <p class="ellipsis" style="width:100%;">{{lang === 'zh-CN' ? product.description : product.englishDescription}}</p>
           </div>
         </el-col>
         <el-col :md="3" :sm="8" :xs="8">
           {{$t('PURCHASE.AUCTION.COLOR')}}
-          {{product.color}}
+          {{product.color == '黑色' ? (lang === 'zh-CN' ? '黑色' : 'Black') : (lang === 'zh-CN' ? '白色' : 'White')}}
         </el-col>
         <el-col :md="3" :sm="8" :xs="8" style="flex-direction: column;">
           <p style="text-decoration: line-through;">{{$t('PURCHASE.AUCTION.PRICE') + product.price}}</p>
-          <p>{{$t('PURCHASE.AUCTION.CURR_PRICE') + product.price * product.discount}}</p>
+          <p>{{$t('PURCHASE.AUCTION.CURR_PRICE') + product.discountPrice}}</p>
         </el-col>
         <el-col :md="3" :sm="8" :xs="8">
           <el-input-number v-model="product.count" size="small" :min="1" @change="changeCount"></el-input-number>
         </el-col>
         <el-col class="subtotal" :md="3" :sm="24">
           <span class="hidden-md-and-up">{{$t('PURCHASE.AUCTION.SUBTOTAL')}}</span>
-          <span class="subtotal-number highlight">￥{{product.price * product.discount * product.count}}</span>
+          <span class="subtotal-number highlight">￥{{product.discountPrice * product.count}}</span>
         </el-col>
         <el-col :md="3" class="hidden-sm-and-down">
           <el-button type="text" @click="removeProduct(product.id)">
@@ -97,6 +97,7 @@ export default {
   data () {
     return {
       loading: false,
+      lang: localStorage.getItem('_lang'),
       products: [],
       fare: 0,
       remark: '',
@@ -107,7 +108,7 @@ export default {
     sum() {
       let sum = 0;
       this.products.forEach(item => {
-        sum += item.price * item.discount * item.count;
+        sum += item.discountPrice * item.count;
       });
       sum += parseInt(this.fare);
       return sum;
