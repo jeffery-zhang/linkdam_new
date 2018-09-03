@@ -10,6 +10,7 @@
     "CART_ERR": "加入到购物车出错!",
     "CART_SUCCESS": "成功添加到购物车",
     "DETAIL": "商品详情",
-    "SPECIFY": "规格参数"
+    "SPECIFY": "规格参数",
+    "PROMO": "促销码"
   }
 }

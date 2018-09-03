@@ -10,6 +10,7 @@
     "CART_ERR": "Error adding to the shopping cart!",
     "CART_SUCCESS": "Successfully added to the shopping cart",
     "DETAIL": "Product Details",
-    "SPECIFY": "Specifications"
+    "SPECIFY": "Specifications",
+    "PROMO": "Promo Code"
   }
 }

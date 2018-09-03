@@ -50,6 +50,14 @@
             <el-input-number size="mini" v-model="count" :min="1"></el-input-number>
           </el-col>
         </el-row>
+        <el-row class="promo-code" type="flex" align="middle">
+          <el-col :sm="4" :xs="10" class="label">
+            {{$t('PRODUCT.PROMO')}}            
+          </el-col>
+          <el-col :sm="20" :xs="14" class="detail">
+            <el-input size="mini" v-model="promoCode" style="width:130px" @change="getPromoCode"></el-input>
+          </el-col>
+        </el-row>
       </div>
       <div class="operate">
         <el-row>
@@ -80,7 +88,7 @@ export default {
   name: 'detail',
   data () {
     return {
-      loading: true,
+      loading: false,
       lang: localStorage.getItem('_lang'),
       product: {},
       pickedColor: '黑色',
@@ -88,6 +96,7 @@ export default {
       count: 1,
       buyLoading: false,
       cartLoading: false,
+      promoCode: '',
     }
   },
   computed: {
@@ -97,7 +106,8 @@ export default {
   },
   methods: {
     getProductInfo() {
-      getData().getProductInfo().then(res => {
+      this.loading = true;
+      getData().getProductInfo(this.promoCode).then(res => {
         this.loading = false;
         let color = [];
         this.product = res.data[0];
@@ -116,6 +126,10 @@ export default {
       this.productId = key === '黑色' ? 1 : 2;
       this.$emit('pickColor', key);
     },
+    getPromoCode() {
+      sessionStorage.setItem('promoCode', this.promoCode);
+      this.getProductInfo();
+    },
     addToCart() {
       if (!this.isLogged) {
         this.$router.push('/login/signin');
@@ -124,6 +138,7 @@ export default {
       const params = {
         productId: this.productId,
         count: this.count,
+        promoCode: this.promoCode,
       };
       return postData().addToCart(params).then(res => {
         this.buyLoading = false;

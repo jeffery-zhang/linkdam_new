@@ -23,9 +23,14 @@
             <p class="ellipsis" style="width:100%;">{{lang === 'zh-CN' ? product.description : product.englishDescription}}</p>
           </div>
         </el-col>
-        <el-col :md="3" :sm="8" :xs="8">
-          {{$t('PURCHASE.AUCTION.COLOR')}}
-          {{product.color == '黑色' ? (lang === 'zh-CN' ? '黑色' : 'Black') : (lang === 'zh-CN' ? '白色' : 'White')}}
+        <el-col :md="3" :sm="8" :xs="8" style="flex-direction: column;">
+          <p>
+            {{$t('PURCHASE.AUCTION.COLOR')}}
+            {{product.color == '黑色' ? (lang === 'zh-CN' ? '黑色' : 'Black') : (lang === 'zh-CN' ? '白色' : 'White')}}
+          </p>
+          <p>
+            {{$t('PRODUCT.PROMO')}}: {{product.promoCode}}
+          </p>
         </el-col>
         <el-col :md="3" :sm="8" :xs="8" style="flex-direction: column;">
           <p style="text-decoration: line-through;">{{$t('PURCHASE.AUCTION.PRICE') + product.price}}</p>
