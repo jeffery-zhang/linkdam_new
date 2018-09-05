@@ -47,13 +47,6 @@
               </el-col>
             </el-row>
           </el-collapse-item>
-          <!-- <el-collapse-item :name="3">
-            <template slot="title">
-              <i class="paypal"></i>
-              PayPal
-            </template>
-            <div id="paypal-btn"></div>
-          </el-collapse-item> -->
         </el-collapse>
         <el-row>
           <el-col :md="6" :sm="12" style="margin-top: 20px;">
@@ -83,30 +76,6 @@ export default {
     }
   },
   methods: {
-    initPaypal(total) {
-      paypal.Button.render({
-        env: 'sandbox',
-        client: {
-          sandbox: 'demo_sandbox_client_id'
-        },
-        payment: function (data, actions) {
-          return actions.payment.create({
-            transactions: [{
-              amount: {
-                total,
-                currency: 'HKD'
-              }
-            }]
-          });
-        },
-        onAuthorize: function (data, actions) {
-          return actions.payment.execute()
-            .then(function () {
-              window.alert('Thank you for your purchase!');
-            });
-        }
-      }, '#paypal-btn');
-    },
     confirmPayment() {
       this.confirming = true;
       const params = {
@@ -124,7 +93,7 @@ export default {
     },
   },
   mounted () {
-    // this.initPaypal();
+    
   },
 }
 </script>
