@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      var lang = localStorage.getItem('_lang');
+      var metaKeywords = document.createElement('meta');
+      var metaDescription = document.createElement('meta');
+
+      var keywords = lang === 'zh-CN' ? 
+        '硬件钱包、全币种钱包、跨链钱包、数字货币、imtoken、链盾、linkdam、加密蓝牙、加密芯片' :
+        'Hardware wallet, full currency wallet, cross-chain wallet, digital currency, imtoken, chain shield, linkdam, encrypted bluetooth, encrypted chip';
+      var description = lang === 'zh-CN' ?
+        '链盾——全币种蓝牙加密硬件钱包，加密芯片、加密蓝牙、算法加密，是全球首款三重加密硬件钱包，为数百万区块链领域的用户提供安全,便捷的数字资产服务。' :
+        "LINKDAM -- full currency bluetooth encryption hardware wallet, encryption chip, encryption bluetooth, algorithm encryption, is the world's first triple encryption hardware wallet, providing safe and convenient digital asset services for millions of users in the blockchain field.";
+      metaKeywords.setAttribute('name', 'keywords');
+      metaKeywords.setAttribute('content', keywords);
+      metaDescription.setAttribute('name', 'description');
+      metaDescription.setAttribute('content', description);
+
+      document.head.appendChild(metaKeywords);
+      document.head.appendChild(metaDescription);
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>linkdam-new</title>
+    <title>linkdam</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   </head>

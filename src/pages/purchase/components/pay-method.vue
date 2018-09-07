@@ -82,7 +82,6 @@ export default {
         orderId: this.id,
       };
       postData().payOrder(params).then(res => {
-        console.log(res);
         this.confirming = false;
         if (!res.result) {
           this.$message.error(res.message);
