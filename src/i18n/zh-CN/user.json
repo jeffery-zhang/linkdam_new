@@ -3,6 +3,8 @@
     "TITLE": "用户中心",
     "ADDR_MANAGE": "地址管理",
     "ORDER_MANAGE": "订单管理",
+    "PROMO_CODE_MANAGE": "折扣码管理",
+    "POINTS_MANAGE": "积分管理",
     "ORDER_ID": "订单号：",
     "RECEIVER": "收货人：",
     "STATUS": "状态：",
@@ -20,6 +22,8 @@
     "PHONE": "联系电话：",
     "ADDRESS": "收货地址：",
     "CANCEL_OK": "订单取消成功",
-    "DELETE_OK": "订单删除成功"
+    "DELETE_OK": "订单删除成功",
+    "YOUR_CODE": "您的折扣码: ",
+    "YOUR_COMMISSION": "您的佣金预计为: "
   }
 }

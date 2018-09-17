@@ -20,6 +20,10 @@ import signup from 'page/login/components/signup'
 import forget from 'page/login/components/forget'
 import addrManage from 'page/user/components/addr-manage'
 import orderManage from 'page/user/components/order-manage'
+import promoCodeManage from 'page/user/components/promo-code-manage'
+import pointsManage from 'page/user/components/points-manage'
+
+import download from 'page/download/download'
 
 Vue.use(Router)
 
@@ -111,6 +115,16 @@ const router = new Router({
           name: 'order-manage',
           component: orderManage,
         },
+        {
+          path: '/user/promo-code-manage',
+          name: 'promo-code-manage',
+          component: promoCodeManage,
+        },
+        {
+          path: '/user/points-manage',
+          name: 'points-manage',
+          component: pointsManage,
+        },
       ],
     },
     {
@@ -138,6 +152,11 @@ const router = new Router({
           component: forget,
         },
       ],
+    },
+    {
+      path: '/download',
+      name: 'download',
+      component: download,
     },
   ],
 });

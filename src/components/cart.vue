@@ -129,7 +129,9 @@ export default {
           this.fare = item.fare;
           item.oldCount = item.count;
         });
-      });
+      }).catch(err => {
+        this.loading = false;
+      })
     },
     changeCount() {
       clearTimeout(this.timer);

@@ -24,5 +24,8 @@ export default {
     changePassword: '/user/change_pas', // 修改密码
     removeProduct: '/cart/delete_cart_one_product', // 删除购物车中指定的商品
     clearCart: '/cart/delete_cart', // 清空购物车
+    getPromoCode: '/user/query_user_promo_code', // 获取用户折扣码
+    getUserPoints: '/user/points/get', // 获取用户积分
+    getPointsDetail: '/user/points/list', // 获取用户积分明细
   },
 }

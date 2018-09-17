@@ -13,6 +13,7 @@ import after_sale_en from './en-US/after_sale.json';
 import registration_en from './en-US/registration.json';
 import protocol_en from './en-US/protocol.json';
 import user_en from './en-US/user.json'
+import points_en from './en-US/points.json'
 // 引入中文文件
 import header_cn from './zh-CN/header.json';
 import footer_cn from './zh-CN/footer.json';
@@ -25,6 +26,7 @@ import after_sale_cn from './zh-CN/after_sale.json';
 import registration_cn from './zh-CN/registration.json';
 import protocol_cn from './zh-CN/protocol.json';
 import user_cn from './zh-CN/user.json'
+import points_cn from './zh-CN/points.json'
 
 Vue.use(VueI18n);
 
@@ -43,6 +45,7 @@ export const i18n = new VueI18n({
       registration_cn,
       protocol_cn,
       user_cn,
+      points_cn,
     ),
     'en-US': Object.assign(header_en,
       footer_en,
@@ -55,6 +58,7 @@ export const i18n = new VueI18n({
       registration_en,
       protocol_en,
       user_en,
+      points_en,
     ),
   }
 });

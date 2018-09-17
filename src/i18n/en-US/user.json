@@ -3,6 +3,8 @@
     "TITLE": "User Center",
     "ADDR_MANAGE": "Address Manage",
     "ORDER_MANAGE": "Order Manage",
+    "PROMO_CODE_MANAGE": "Discount Code Manage",
+    "POINTS_MANAGE": "Points Manage",
     "ORDER_ID": "Order id: ",
     "RECEIVER": "Receiver: ",
     "STATUS": "Status: ",
@@ -20,6 +22,8 @@
     "PHONE": "Contact: ",
     "ADDRESS": "Shipping address",
     "CANCEL_OK": "Cancel order successful",
-    "DELETE_OK": "Delete order successful"
+    "DELETE_OK": "Delete order successful",
+    "YOUR_CODE": "Your Discount Code: ",
+    "YOUR_COMMISSION": "Expected Commission: "
   }
 }

@@ -7,8 +7,14 @@
       <el-menu-item index="order-manage" >
         {{$t('USER.ORDER_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="promo-code-manage">
+        {{$t('USER.PROMO_CODE_MANAGE')}}
+      </el-menu-item>
+      <el-menu-item index="points-manage">
+        {{$t('USER.POINTS_MANAGE')}}
+      </el-menu-item>
     </el-menu>
-    <div class="order-list">
+    <div class="order-list" v-if="orders.length > 0">
       <div class="order-item" v-for="(order, index) in orders" :key="index">
         <el-row class="grey-bg">
           <el-col :sm="9">
@@ -68,6 +74,9 @@
           </el-col>
         </el-row>
       </div>
+    </div>
+    <div class="empty" v-if="orders.length === 0">
+      暂无订单记录
     </div>
   </div>
 </template>
@@ -212,5 +221,10 @@ export default {
       }
     }
   }
+}
+
+.empty {
+  margin-top: 100px;
+  text-align: center;
 }
 </style>

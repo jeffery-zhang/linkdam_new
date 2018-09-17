@@ -44,5 +44,14 @@ export default function () {
     getOrders() {
       return getFunction(urls.getOrders, {}, true);
     },
+    getPromoCode() {
+      return getFunction(urls.getPromoCode, {}, true);
+    },
+    getUserPoints() {
+      return getFunction(urls.getUserPoints, {}, true);
+    },
+    getPointsDetail(page = 1) {
+      return getFunction(urls.getPointsDetail, { page }, true);
+    },
   }
 }

@@ -7,6 +7,12 @@
       <el-menu-item index="order-manage" >
         {{$t('USER.ORDER_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="promo-code-manage">
+        {{$t('USER.PROMO_CODE_MANAGE')}}
+      </el-menu-item>
+      <el-menu-item index="points-manage">
+        {{$t('USER.POINTS_MANAGE')}}
+      </el-menu-item>
     </el-menu>
     <el-row>
       <el-col :md="8" :sm="12" :xs="24" v-for="(item, index) in address" :key="index">
@@ -76,7 +82,9 @@ export default {
           item.deleting = false;
         });
         this.selectedAddress = this.address[0].id;
-      });
+      }).catch(err => {
+        this.loading = false;
+      })
     },
     deleteAddress(item) {
       item.deleting = true;

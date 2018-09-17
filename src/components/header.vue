@@ -29,6 +29,7 @@
             <el-menu-item index="registration">{{$t('FOOTER.REGISTER')}}</el-menu-item>
             <el-menu-item index="protocol">{{$t('FOOTER.USE')}}</el-menu-item>
             <el-menu-item index="after_sale">{{$t('FOOTER.SALE')}}</el-menu-item>
+            <el-menu-item index="manual">{{$t('HEADER.MANUAL')}}</el-menu-item>
           </el-submenu>
           <el-submenu index="language">
             <template slot="title">
@@ -46,7 +47,7 @@
             <li @click="handleSelect('product')">{{$t('HEADER.PRODUCT')}}</li>
             <li @click="handleSelect('signin')" v-if="!isLogged">{{$t('HEADER.LOGIN')}}</li>
             <li @click="handleSelect('cart')" v-if="isLogged">{{$t('PURCHASE.CART.TITLE')}}</li>
-            <li @click="handleSelect('user')" v-if="isLogged">{{$t('HEADER.USER')}}</li>
+            <li @click="handleSelect('address-manage')" v-if="isLogged">{{$t('HEADER.USER')}}</li>
             <li @click="logout" v-if="isLogged">{{$t('HEADER.LOGOUT')}}</li>
             <li>
               <a href="javascript:;" :class="{active: currentLang == 'en-US'}" @click="switchLanguage('en-US')">English</a>/
@@ -105,6 +106,9 @@
       }),
       handleSelect(key) {
         if (key === 'logout' || key === 'zh-CN' || key === 'en-US') return;
+        if (key === 'manual') {
+          window.open('/static/linkdam_manual_cn.pdf', '_blank')
+        }
         this.$router.push({
           name: key,
         });
