@@ -45,6 +45,7 @@
           <ul>
             <li @click="handleSelect('index')">{{$t('HEADER.HOME')}}</li>
             <li @click="handleSelect('product')">{{$t('HEADER.PRODUCT')}}</li>
+            <li @click="handleSelect('manual')">{{$t('HEADER.MANUAL')}}</li>
             <li @click="handleSelect('signin')" v-if="!isLogged">{{$t('HEADER.LOGIN')}}</li>
             <li @click="handleSelect('cart')" v-if="isLogged">{{$t('PURCHASE.CART.TITLE')}}</li>
             <li @click="handleSelect('address-manage')" v-if="isLogged">{{$t('HEADER.USER')}}</li>
