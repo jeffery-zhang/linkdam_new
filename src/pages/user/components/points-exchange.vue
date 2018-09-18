@@ -157,7 +157,6 @@ export default {
     },
     getList(page) {
       get().applyList(page).then(res => {
-        console.log(res);
         this.list = res.data.list;
         this.totalPage = res.data.totalPage;
       })
