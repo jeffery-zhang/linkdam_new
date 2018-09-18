@@ -27,5 +27,7 @@ export default {
     getPromoCode: '/user/query_user_promo_code', // 获取用户折扣码
     getUserPoints: '/user/points/get', // 获取用户积分
     getPointsDetail: '/user/points/list', // 获取用户积分明细
+    applyExchange: '/user/points/extractApply', // 提交提现申请
+    applyList: '/user/points/extractApplyList', // 获取提现申请列表
   },
 }

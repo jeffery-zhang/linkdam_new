@@ -13,6 +13,9 @@
       <el-menu-item index="points-manage">
         {{$t('USER.POINTS_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="points-exchange">
+        {{$t('USER.POINTS_EXCHANGE')}}
+      </el-menu-item>
     </el-menu>
     <el-row>
       <el-col :md="8" :sm="12" :xs="24" v-for="(item, index) in address" :key="index">

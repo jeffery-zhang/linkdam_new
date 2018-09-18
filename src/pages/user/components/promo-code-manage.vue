@@ -13,9 +13,12 @@
       <el-menu-item index="points-manage">
         {{$t('USER.POINTS_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="points-exchange">
+        {{$t('USER.POINTS_EXCHANGE')}}
+      </el-menu-item>
     </el-menu>
     <el-row v-if="!!promoCode" style="padding:40px 20px;border-bottom:1px solid #e6e6e6">
-      <el-col :span="6">
+      <el-col :md="6">
         <span>{{$t('USER.YOUR_CODE')}}</span>
         <strong style="font-size:20px;color: #FF0036">{{promoCode}}</strong>
       </el-col>
@@ -34,7 +37,7 @@
         <el-button type="primary"
           round
           data-clipboard-target="#share"
-          style="width:600px;margin:0 auto;"
+          style="max-width:600px;margin:0 auto;"
           id="copy">{{$t('POINTS.COPY')}}</el-button>
       </div>
     </div>
@@ -92,7 +95,7 @@ export default {
 .sharing-copy {
   margin-top: 40px;
   .container {
-    width: 600px;
+    max-width: 600px;
     margin: 40px auto;
     padding: 30px 60px 60px;
     border-radius: 20px;

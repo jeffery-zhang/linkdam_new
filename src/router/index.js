@@ -22,6 +22,7 @@ import addrManage from 'page/user/components/addr-manage'
 import orderManage from 'page/user/components/order-manage'
 import promoCodeManage from 'page/user/components/promo-code-manage'
 import pointsManage from 'page/user/components/points-manage'
+import pointsExchange from 'page/user/components/points-exchange'
 
 import download from 'page/download/download'
 
@@ -124,6 +125,11 @@ const router = new Router({
           path: '/user/points-manage',
           name: 'points-manage',
           component: pointsManage,
+        },
+        {
+          path: '/user/points-exchange',
+          name: 'points-exchange',
+          component: pointsExchange,
         },
       ],
     },

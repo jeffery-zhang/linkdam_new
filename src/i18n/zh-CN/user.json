@@ -5,6 +5,7 @@
     "ORDER_MANAGE": "订单管理",
     "PROMO_CODE_MANAGE": "折扣码管理",
     "POINTS_MANAGE": "积分管理",
+    "POINTS_EXCHANGE": "积分兑换",
     "ORDER_ID": "订单号：",
     "RECEIVER": "收货人：",
     "STATUS": "状态：",

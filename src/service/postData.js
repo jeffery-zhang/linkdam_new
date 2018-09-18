@@ -75,5 +75,8 @@ export default function () {
     payOrder(params) {
       return postFunction(urls.payOrder, params, true);
     },
+    applyExchange(params) {
+      return postFunction(urls.applyExchange, params, true);
+    },
   };
 };

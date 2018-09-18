@@ -53,5 +53,8 @@ export default function () {
     getPointsDetail(page = 1) {
       return getFunction(urls.getPointsDetail, { page }, true);
     },
+    applyList(page = 1) {
+      return getFunction(urls.applyList, { page }, true);
+    },
   }
 }

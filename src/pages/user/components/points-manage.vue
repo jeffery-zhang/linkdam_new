@@ -13,13 +13,16 @@
       <el-menu-item index="points-manage">
         {{$t('USER.POINTS_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="points-exchange">
+        {{$t('USER.POINTS_EXCHANGE')}}
+      </el-menu-item>
     </el-menu>
     <el-row style="padding:40px 20px;border-bottom:1px solid #e6e6e6">
-      <el-col :span="6">
-        <span>{{$t('POINTS.ALL_POINTS')}}{{parseInt(allPoints)}}</span>
+      <el-col :md="6" :xs="12">
+        <span>{{$t('POINTS.ALL_POINTS')}}{{parseInt(allPoints)}}DAM</span>
       </el-col>
-      <el-col :span="6" :offset="1">
-        <span>{{$t('POINTS.USABLE_POINTS')}}{{parseInt(usablePoints)}}</span>
+      <el-col :md="6" :xs="12">
+        <span>{{$t('POINTS.USABLE_POINTS')}}{{parseInt(usablePoints)}}DAM</span>
       </el-col>
     </el-row>
     <div class="container">
@@ -31,7 +34,7 @@
         </el-table-column>
         <el-table-column label="积分">
           <template slot-scope="scope">
-            {{scope.row.type > 2 ? '-' : '+' + scope.row.value}}
+            {{scope.row.type > 2 ? '' : '+'}}{{scope.row.value}}
           </template>
         </el-table-column>
         <el-table-column label="类别" prop="reason"></el-table-column>
@@ -41,6 +44,7 @@
           </template>
         </el-table-column>
       </el-table>
+      <el-pagination class="fr" layout="prev, pager, next" :page-count="totalPage" @current-change="changePage"></el-pagination>
     </div>
   </div>
 </template>
@@ -58,6 +62,7 @@ export default {
       allPoints: 0,
       usablePoints: 0,
       list: [],
+      totalPage: 1,
     }
   },
   methods: {
@@ -69,6 +74,7 @@ export default {
       })
       get().getPointsDetail(page).then(res => {
         this.list = res.data.list;
+        this.totalPage = res.data.totalPage;
         this.loading = false;
       })
     },
@@ -94,9 +100,12 @@ export default {
         name,
       });
     },
+    changePage(page) {
+      this.getData(page);
+    },
   },
   mounted() {
-    this.getData()
+    this.getData(1)
   },
 }
 </script>

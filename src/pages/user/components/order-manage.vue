@@ -13,6 +13,9 @@
       <el-menu-item index="points-manage">
         {{$t('USER.POINTS_MANAGE')}}
       </el-menu-item>
+      <el-menu-item index="points-exchange">
+        {{$t('USER.POINTS_EXCHANGE')}}
+      </el-menu-item>
     </el-menu>
     <div class="order-list" v-if="orders.length > 0">
       <div class="order-item" v-for="(order, index) in orders" :key="index">
