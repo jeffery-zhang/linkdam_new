@@ -47,7 +47,11 @@
         @click="dialogShow = true">{{$t('POINTS.WITHDRAW')}}</el-button>
     </el-row>
     <el-table :data="list" stripe>
-      <el-table-column label="日期" prop="createDate"></el-table-column>
+      <el-table-column label="日期">
+        <template slot-scope="scope">
+          {{timeTransfer(scope.row.createDate, true)}}
+        </template>
+      </el-table-column>
       <el-table-column label="积分" prop="extractPoints"></el-table-column>
       <el-table-column label="类型">
         <template slot-scope="scope">
@@ -103,6 +107,7 @@
 <script>
 import get from 'service/getData'
 import post from 'service/postData'
+import timeTransfer from 'service/timeTransfer'
 
 export default {
   name: 'points-exchange',
@@ -146,6 +151,9 @@ export default {
         })
       })
       this.getList(page);
+    },
+    timeTransfer(time, simple) {
+      return timeTransfer(time, simple);
     },
     getList(page) {
       get().applyList(page).then(res => {
