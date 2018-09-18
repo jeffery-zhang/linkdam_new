@@ -24,7 +24,7 @@
     "CANCEL": "CANCEL",
     "SUCCESS": "Apply Succeed!",
     "STATUS_1": "Submitted",
-    "STATUS_2": "Reviewing",
+    "STATUS_2": "Reviewed",
     "STATUS_3": "Reject",
     "STATUS_4": "Succeed"
   }

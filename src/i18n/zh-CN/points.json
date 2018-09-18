@@ -25,7 +25,7 @@
     "CANCEL": "取消",
     "SUCCESS": "提交成功!",
     "STATUS_1": "已提交",
-    "STATUS_2": "正在审核",
+    "STATUS_2": "审核通过",
     "STATUS_3": "驳回",
     "STATUS_4": "已成功"
   }
