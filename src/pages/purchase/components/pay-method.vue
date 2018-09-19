@@ -9,7 +9,7 @@
               {{$t('PURCHASE.PAYMENT.WECHAT')}}
             </template>
             <el-row>
-              <el-col :span="15">
+              <el-col :md="15">
                 <p>
                   {{$t('PURCHASE.PAYMENT.WECHAT_1')}}
                 </p>
@@ -17,10 +17,14 @@
                   {{$t('PURCHASE.PAYMENT.WECHAT_2')}}
                 </p>
                 <p class="order-id">
-                  {{orderId}}
+                  <span id="wxOrder">{{orderId}}</span>
+                  <i class="iconfont copy-btn"
+                    id="wxCopy"
+                    data-clipboard-target="#wxOrder">&#xe634;</i>
                 </p>
+                <savable-image class="hidden-lg-and-up" :image="wxQrcode"></savable-image>
               </el-col>
-              <el-col :span="9">
+              <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/wx-qrcode.png">
               </el-col>
             </el-row>
@@ -31,7 +35,7 @@
               {{$t('PURCHASE.PAYMENT.ALIPAY')}}
             </template>
             <el-row>
-              <el-col :span="15">
+              <el-col :md="15">
                 <p>
                   {{$t('PURCHASE.PAYMENT.ALIPAY_1')}}
                 </p>
@@ -39,10 +43,14 @@
                   {{$t('PURCHASE.PAYMENT.ALIPAY_2')}}
                 </p>
                 <p class="order-id">
-                  {{orderId}}
+                  <span id="aliOrder">{{orderId}}</span>
+                  <i class="iconfont copy-btn"
+                    id="aliCopy"
+                    data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
+                <savable-image class="hidden-lg-and-up" :image="aliQrcode"></savable-image>
               </el-col>
-              <el-col :span="9">
+              <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/ali-qrcode.png">
               </el-col>
             </el-row>
@@ -61,7 +69,11 @@
 </template>
 
 <script>
+import Clipboard from 'clipboard'
 import postData from 'service/postData'
+import savableImage from 'comp/savableImage'
+import wxQrcode from './assets/wx-qrcode.png'
+import aliQrcode from './assets/ali-qrcode.png'
 
 export default {
   name: 'pay-method',
@@ -69,10 +81,15 @@ export default {
     'orderId',
     'id',
   ],
+  components: {
+    savableImage,
+  },
   data () {
     return {
       method: 1,
       confirming: false,
+      wxQrcode,
+      aliQrcode,
     }
   },
   methods: {
@@ -92,7 +109,8 @@ export default {
     },
   },
   mounted () {
-    
+    new Clipboard('#wxCopy')
+    new Clipboard('#aliCopy')
   },
 }
 </script>
@@ -127,9 +145,18 @@ export default {
       max-width: 200px;
     }
     .order-id {
+      display: flex;
+      align-items: center;
       font-size: 30px;
       font-weight: bold;
       color: $red-color;
+      .copy-btn {
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: normal;
+        color: #a9a9a9;
+        cursor: pointer;
+      }
     }
   }
 }
