@@ -45,6 +45,7 @@
         style="max-width:300px;margin-top:40px;"
         :disabled="usablePoints < raiseAmount"
         @click="dialogShow = true">{{$t('POINTS.WITHDRAW')}}</el-button>
+        <p class="focus">ps: {{$t('POINTS.WITHDRAW_TIP1')}}{{raiseAmount}}DAM{{$t('POINTS.WITHDRAW_TIP2')}}</p>
     </el-row>
     <el-table :data="list" stripe>
       <el-table-column label="日期">

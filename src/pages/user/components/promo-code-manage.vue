@@ -18,9 +18,10 @@
       </el-menu-item>
     </el-menu>
     <el-row v-if="!!promoCode" style="padding:40px 20px;border-bottom:1px solid #e6e6e6">
-      <el-col :md="6">
+      <el-col>
         <span>{{$t('USER.YOUR_CODE')}}</span>
         <strong style="font-size:20px;color: #FF0036">{{promoCode}}</strong>
+        <p class="focus">ps: {{$t('POINTS.CODE_TIP')}}</p>
       </el-col>
     </el-row>
     <div class="sharing-copy">

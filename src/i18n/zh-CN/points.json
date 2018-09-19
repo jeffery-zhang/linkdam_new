@@ -27,6 +27,9 @@
     "STATUS_1": "已提交",
     "STATUS_2": "审核通过",
     "STATUS_3": "驳回",
-    "STATUS_4": "已成功"
+    "STATUS_4": "已成功",
+    "CODE_TIP": "用户不能使用自己的折扣码进行购买链盾",
+    "WITHDRAW_TIP1": "积分需达到",
+    "WITHDRAW_TIP2": "以上才可以进行提现操作"
   }
 }

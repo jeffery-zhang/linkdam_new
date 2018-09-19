@@ -83,10 +83,5 @@ export default {
       }
     }
   }
-  .focus {
-    margin: 10px 0;
-    font-weight: bold;
-    color: $red-color;
-  }
 }
 </style>

@@ -26,6 +26,9 @@
     "STATUS_1": "Submitted",
     "STATUS_2": "Reviewed",
     "STATUS_3": "Reject",
-    "STATUS_4": "Succeed"
+    "STATUS_4": "Succeed",
+    "CODE_TIP": "You cannot use your own discount code to purchase the LINKDAM",
+    "WITHDRAW_TIP1": "Points need to reach ",
+    "WITHDRAW_TIP2": " or more before cash withdrawal"
   }
 }
