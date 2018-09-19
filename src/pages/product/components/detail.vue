@@ -80,6 +80,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import { mapState } from 'vuex';
 import getData from 'service/getData'
 import postData from 'service/postData'
@@ -107,7 +108,7 @@ export default {
   methods: {
     getProductInfo() {
       this.loading = true;
-      getData().getProductInfo(this.promoCode).then(res => {
+      getData().getProductInfo(this.promoCode, Cookies.get('userId')).then(res => {
         this.loading = false;
         let color = [];
         this.product = res.data[0];

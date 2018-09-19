@@ -25,6 +25,7 @@
             </p>
           </el-col>
         </el-row>
+        <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_1')}}</p>
       </el-tab-pane>
     </el-tabs>
   </section>
@@ -81,6 +82,11 @@ export default {
         }
       }
     }
+  }
+  .focus {
+    margin: 10px 0;
+    font-weight: bold;
+    color: $red-color;
   }
 }
 </style>

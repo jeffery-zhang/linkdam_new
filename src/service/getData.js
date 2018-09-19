@@ -26,8 +26,8 @@ export default function () {
       .then(res => res.data);
   };
   return {
-    getProductInfo(promoCode) {
-      return getFunction(urls.productInfo, { promoCode });
+    getProductInfo(promoCode, userId) {
+      return getFunction(urls.productInfo, { promoCode, userId });
     },
     getDefaultCountryCode() {
       return getFunction(urls.defaultCountryCode);

@@ -53,7 +53,9 @@
       "SUCCEED": "Payment Successful",
       "TIP": "Customer service will confirm the order information with you within 24 hours.",
       "ORDER": "Check Orders",
-      "INDEX": "Home"
+      "INDEX": "Home",
+      "TRANSFER_TIP_1": "Please transfer the order number on the Alipay and WeChat payment pages when transferring funds, otherwise the customer service cannot judge your order.",
+      "TRANSFER_TIP_2": "Please be sure to note the order number on the payment page when transferring funds, otherwise the customer service cannot judge your order."
     }
   }
 }

@@ -32,6 +32,8 @@
         【折后价】{{parseInt(discountPrice)}} 元<br>
         【折扣码】{{promoCode}}<br>
         【下单链接】http://linkdam.com/#/product<br>
+        <br>-----------------<br><br>
+        {{$t('USER.COPY_TIP')}}
       </div>
       <div class="btn" style="text-align:center">
         <el-button type="primary"

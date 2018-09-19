@@ -22,6 +22,7 @@
                     id="wxCopy"
                     data-clipboard-target="#wxOrder">&#xe634;</i>
                 </p>
+                <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
                 <savable-image class="hidden-lg-and-up" :image="wxQrcode"></savable-image>
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
@@ -48,6 +49,7 @@
                     id="aliCopy"
                     data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
+                <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
                 <savable-image class="hidden-lg-and-up" :image="aliQrcode"></savable-image>
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
@@ -109,8 +111,14 @@ export default {
     },
   },
   mounted () {
-    new Clipboard('#wxCopy')
-    new Clipboard('#aliCopy')
+    const wxCopy = new Clipboard('#wxCopy')
+    const aliCopy = new Clipboard('#aliCopy')
+    wxCopy.on('success', () => {
+      this.$message.success(this.$t('POINTS.COPY_SUCCESS'))
+    })
+    aliCopy.on('success', () => {
+      this.$message.success(this.$t('POINTS.COPY_SUCCESS'))
+    })
   },
 }
 </script>
@@ -158,6 +166,11 @@ export default {
         cursor: pointer;
       }
     }
+  }
+  .focus {
+    margin: 10px 0;
+    font-weight: bold;
+    color: $red-color;
   }
 }
 </style>

@@ -25,6 +25,7 @@
     "CANCEL_OK": "Cancel order successful",
     "DELETE_OK": "Delete order successful",
     "YOUR_CODE": "Your Discount Code: ",
-    "YOUR_COMMISSION": "Expected Commission: "
+    "YOUR_COMMISSION": "Expected Commission: ",
+    "COPY_TIP": "Open the site and enter the discount code to purchase the LINKDAM."
   }
 }
