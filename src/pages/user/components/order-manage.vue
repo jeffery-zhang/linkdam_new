@@ -72,8 +72,14 @@
             </p>
           </el-col>
           <el-col :sm="16">
-            {{$t('USER.ADDRESS')}}
-            {{order.address.country}} {{order.address.address}}
+            <p>
+              {{$t('USER.ADDRESS')}}
+              {{order.address.country}} {{order.address.address}}
+            </p>
+            <p v-show="order.expressNo">
+              {{$t('USER.EXPRESS_NO')}}
+              {{order.expressNo}}
+            </p>
           </el-col>
         </el-row>
       </div>

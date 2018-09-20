@@ -21,7 +21,7 @@
       <el-col>
         <span>{{$t('USER.YOUR_CODE')}}</span>
         <strong style="font-size:20px;color: #FF0036">{{promoCode}}</strong>
-        <p class="focus">ps: {{$t('POINTS.CODE_TIP')}}</p>
+        <p class="focus">{{$t('HEADER.PS')}}{{$t('POINTS.CODE_TIP')}}</p>
       </el-col>
     </el-row>
     <div class="sharing-copy">

@@ -11,6 +11,7 @@
     "WELCOME": "Welcome, ",
     "USER": "User",
     "CENTER": "User Center",
-    "LOGOUT": "Log Out"
+    "LOGOUT": "Log Out",
+    "PS": "PS: "
   }
 }

@@ -21,6 +21,7 @@
     "SUM": "合计：",
     "DISCOUNT": "折扣：",
     "PHONE": "联系电话：",
+    "EXPRESS_NO": "快递单号：",
     "ADDRESS": "收货地址：",
     "CANCEL_OK": "订单取消成功",
     "DELETE_OK": "订单删除成功",

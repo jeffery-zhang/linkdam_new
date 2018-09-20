@@ -11,6 +11,7 @@
     "WELCOME": "欢迎，",
     "USER": "用户",
     "CENTER": "用户中心",
-    "LOGOUT": "退出"
+    "LOGOUT": "退出",
+    "PS": "注: "
   }
 }

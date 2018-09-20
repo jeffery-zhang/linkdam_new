@@ -23,7 +23,7 @@
                     data-clipboard-target="#wxOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <img src="./assets/wx-qrcode.png">
+                <img class="hidden-lg-and-up" src="./assets/wx-qrcode.png">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/wx-qrcode.png">
@@ -43,6 +43,14 @@
                 <p>
                   {{$t('PURCHASE.PAYMENT.ALIPAY_2')}}
                 </p>
+                <p>
+                  支付宝账号: 
+                  <span id="aliAccount">13880080712</span>
+                  <i class="iconfont copy-btn"
+                    id="aliAccountCopy"
+                    style="font-size:16px"
+                    data-clipboard-target="#aliAccount">&#xe634;</i>
+                </p>
                 <p class="order-id">
                   <span id="aliOrder">{{orderId}}</span>
                   <i class="iconfont copy-btn"
@@ -50,7 +58,7 @@
                     data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <img src="./assets/ali-qrcode.png">
+                <img class="hidden-lg-and-up" src="./assets/ali-qrcode.png">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/ali-qrcode.png">
@@ -113,10 +121,14 @@ export default {
   mounted () {
     const wxCopy = new Clipboard('#wxCopy')
     const aliCopy = new Clipboard('#aliCopy')
+    const aliAccountCopy = new Clipboard('#aliAccountCopy')
     wxCopy.on('success', () => {
       this.$message.success(this.$t('POINTS.COPY_SUCCESS'))
     })
     aliCopy.on('success', () => {
+      this.$message.success(this.$t('POINTS.COPY_SUCCESS'))
+    })
+    aliAccountCopy.on('success', () => {
       this.$message.success(this.$t('POINTS.COPY_SUCCESS'))
     })
   },
@@ -158,6 +170,7 @@ export default {
       font-size: 30px;
       font-weight: bold;
       color: $red-color;
+    }
       .copy-btn {
         margin-left: 15px;
         font-size: 20px;
@@ -165,7 +178,6 @@ export default {
         color: #a9a9a9;
         cursor: pointer;
       }
-    }
   }
 }
 </style>
