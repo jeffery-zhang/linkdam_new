@@ -23,7 +23,7 @@
                     data-clipboard-target="#wxOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <savable-image class="hidden-lg-and-up" :image="wxQrcode"></savable-image>
+                <img src="./assets/wx-qrcode.png">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/wx-qrcode.png">
@@ -50,7 +50,7 @@
                     data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <savable-image class="hidden-lg-and-up" :image="aliQrcode"></savable-image>
+                <img src="./assets/ali-qrcode.png">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/ali-qrcode.png">

@@ -2,6 +2,7 @@
   <div class="container">
     <img :src="image" @click="showCanvas">
     <div class="canvas-wrapper" v-if="canvasShow">
+      <img class="image absolute-center" :src="image">
       <canvas id="canvas" class="absolute-center" width="300" height="300"></canvas>
       <i class="wrapper-icon el-icon-close" @click="canvasShow = false"></i>
       <i class="save-icon el-icon-download" @click="saveToImage"></i>
@@ -51,7 +52,12 @@ export default {
   background-color: rgba(0, 0, 0, .7);
   z-index: 999;
   #canvas {
-
+    visibility: hidden;
+  }
+  .image {
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
   }
   .wrapper-icon {
     position: absolute;
