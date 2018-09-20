@@ -18,7 +18,7 @@
       </el-menu-item>
     </el-menu>
     <div class="order-list" v-if="orders.length > 0">
-      <div class="order-item" v-for="(order, index) in orders" :key="index">
+      <div class="order-item" v-for="(order, index) in orders" :key="index" v-show="order.status > 1">
         <el-row class="grey-bg">
           <el-col :sm="9">
             {{timeTransfer(order.createTime)}}
