@@ -10,8 +10,11 @@
             </template>
             <el-row>
               <el-col :md="15">
-                <p>
+                <p class="hidden-md-and-down">
                   {{$t('PURCHASE.PAYMENT.WECHAT_1')}}
+                </p>
+                <p class="hidden-lg-and-up">
+                  {{$t('PURCHASE.PAYMENT.M_WECHAT_1')}}
                 </p>
                 <p>
                   {{$t('PURCHASE.PAYMENT.WECHAT_2')}}
@@ -37,8 +40,11 @@
             </template>
             <el-row>
               <el-col :md="15">
-                <p>
+                <p class="hidden-md-and-down">
                   {{$t('PURCHASE.PAYMENT.ALIPAY_1')}}
+                </p>
+                <p class="hidden-lg-and-up">
+                  {{$t('PURCHASE.PAYMENT.M_ALIPAY_1')}}
                 </p>
                 <p>
                   {{$t('PURCHASE.PAYMENT.ALIPAY_2')}}
@@ -58,7 +64,7 @@
                     data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <img class="hidden-lg-and-up" :src="aliQrcode">
+                <img class="hidden-lg-and-up" :src="aliQrcode" @click="showLargeImg(aliQrcode)">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/ali-qrcode.png">
