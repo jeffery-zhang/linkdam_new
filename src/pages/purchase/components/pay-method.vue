@@ -23,7 +23,7 @@
                     data-clipboard-target="#wxOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <img class="hidden-lg-and-up" src="./assets/wx-qrcode.png">
+                <img class="hidden-lg-and-up" :src="wxQrcode" @click="showLargeImg(wxQrcode)">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/wx-qrcode.png">
@@ -45,7 +45,7 @@
                 </p>
                 <p>
                   支付宝账号: 
-                  <span id="aliAccount">13880080712</span>
+                  <span id="aliAccount" style="font-size:18px;font-weight:bold;">13880080712</span>
                   <i class="iconfont copy-btn"
                     id="aliAccountCopy"
                     style="font-size:16px"
@@ -58,7 +58,7 @@
                     data-clipboard-target="#aliOrder">&#xe634;</i>
                 </p>
                 <p class="focus">{{$t('PURCHASE.PAYMENT.TRANSFER_TIP_2')}}</p>
-                <img class="hidden-lg-and-up" src="./assets/ali-qrcode.png">
+                <img class="hidden-lg-and-up" :src="aliQrcode">
               </el-col>
               <el-col class="hidden-md-and-down" :span="9">
                 <img src="./assets/ali-qrcode.png">
@@ -75,6 +75,9 @@
         </el-row>
       </el-tab-pane>
     </el-tabs>
+    <div class="large-img-container" v-show="imgShow" @click="imgShow = false;">
+      <img :src="img" class="absolute-center">
+    </div>
   </section>
 </template>
 
@@ -100,6 +103,8 @@ export default {
       confirming: false,
       wxQrcode,
       aliQrcode,
+      img: '',
+      imgShow: false,
     }
   },
   methods: {
@@ -116,6 +121,10 @@ export default {
         }
         this.$router.push('/purchase/success');
       });
+    },
+    showLargeImg(img) {
+      this.img = img;
+      this.imgShow = true;
     },
   },
   mounted () {
@@ -178,6 +187,19 @@ export default {
         color: #a9a9a9;
         cursor: pointer;
       }
+  }
+  .large-img-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 999;
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
 </style>

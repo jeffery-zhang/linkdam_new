@@ -45,7 +45,6 @@
             {{$t('USER.STATUS')}}{{showStatus(order.status)}}
           </el-col>
           <el-col :sm="5" class="operate">
-            <span v-if="order.status == 2 || order.status == 3 || order.status == 5">{{$t('USER.INOPERABLE')}}</span>
             <el-button type="text" v-if="order.status == 1" @click="cancelOrder(order.id)">{{$t('USER.CANCEL')}}</el-button>
             <el-button type="text" v-if="order.status == 4" @click="deleteOrder(order.id)">{{$t('USER.DELETE')}}</el-button>
           </el-col>
