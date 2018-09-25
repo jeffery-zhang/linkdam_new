@@ -56,5 +56,14 @@ export default function () {
     applyList(page = 1) {
       return getFunction(urls.applyList, { page }, true);
     },
+    getMediaList(page = 1) {
+      return getFunction(urls.getMediaList, { page });
+    },
+    getRecommendMedia(page = 1) {
+      return getFunction(urls.getRecommendMedia, { page });
+    },
+    getMedia(id) {
+      return getFunction(urls.getMedia, { id });
+    },
   }
 }

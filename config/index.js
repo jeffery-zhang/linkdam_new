@@ -31,6 +31,10 @@ module.exports = {
         target: 'http://www.linkdam.com',
         changeOrigin: true
       },
+      '/article':{
+        target: 'http://www.linkdam.com',
+        changeOrigin: true
+      },
     },
 
     // Various Dev Server settings

@@ -23,6 +23,8 @@ import orderManage from 'page/user/components/order-manage'
 import promoCodeManage from 'page/user/components/promo-code-manage'
 import pointsManage from 'page/user/components/points-manage'
 import pointsExchange from 'page/user/components/points-exchange'
+import media from 'page/media/media'
+import mediaList from 'page/media/components/media-list'
 
 import download from 'page/download/download'
 
@@ -156,6 +158,22 @@ const router = new Router({
           path: '/login/forget',
           name: 'forget',
           component: forget,
+        },
+      ],
+    },
+    {
+      path: '/media',
+      name: 'media',
+      component: media,
+      children: [
+        {
+          path: '/media',
+          redirect: '/media/list',
+        },
+        {
+          path: '/media/list',
+          name: 'media-list',
+          component: mediaList,
         },
       ],
     },

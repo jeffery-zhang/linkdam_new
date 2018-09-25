@@ -29,5 +29,8 @@ export default {
     getPointsDetail: '/user/points/list', // 获取用户积分明细
     applyExchange: '/user/points/extractApply', // 提交提现申请
     applyList: '/user/points/extractApplyList', // 获取提现申请列表
+    getMediaList: '/article/list', // 获取发布中的媒体报道列表
+    getMedia: '/article/get', // 获取媒体报道
+    getRecommendMedia: '/article/list_recommend', // 获取推荐报道列表
   },
 }

@@ -65,9 +65,9 @@ export default {
       height: 12.53vh;
       @include icon-normal('./assets/bg_mobile.png');
       .operate-button {
-        line-height: 38px;
+        line-height: 32px;
         font-size: 14px;
-        @include wh(150px, 38px);
+        @include wh(150px, 32px);
         &.buy {
           color: #fff;
           @include icon-normal('./assets/buy_web.png');

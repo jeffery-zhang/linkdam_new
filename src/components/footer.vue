@@ -56,10 +56,10 @@ export default {
 .el-footer {
   padding-top: 40px;
   background-color: $footer-background;
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 992px) {
     height: 230px !important;
   }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     height: 660px !important;
   }
   * {
