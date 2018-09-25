@@ -70,11 +70,9 @@ export default {
     .media-report {
       display: flex;
       margin: 20px 0;
-      border: 1px solid #ccc;
       border-radius: 10px;
       overflow: hidden;
       &:hover {
-        border-color: $theme-color;
         box-shadow: 0 0px 10px 1px rgba(52, 154, 255, 0.8);
         cursor: pointer;
         .title {
