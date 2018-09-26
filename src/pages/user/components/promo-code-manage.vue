@@ -69,7 +69,7 @@ export default {
         this.price = parseInt(res.data[0].price)
         get().getPromoCode().then(res => {
           this.promoCode = res.data.promoCode;
-          this.discountPrice = (1 - res.data.discountPercent) * this.price;
+          this.discountPrice = res.data.discountPercent * this.price;
           this.loading = false;
         }).catch(err => {
           this.loading = false;

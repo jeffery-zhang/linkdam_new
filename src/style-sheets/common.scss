@@ -6,6 +6,10 @@
   padding: 60px 0 0;
 }
 
+.el-menu--horizontal {
+  border-bottom: none;
+}
+
 .el-button {
   width: 100%;
   &.el-button--primary, &.el-button--info {

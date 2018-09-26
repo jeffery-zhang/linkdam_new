@@ -13,6 +13,7 @@
     "USER": "User",
     "CENTER": "User Center",
     "LOGOUT": "Log Out",
-    "PS": "PS: "
+    "PS": "PS: ",
+    "ESSENCE": "Essence"
   }
 }

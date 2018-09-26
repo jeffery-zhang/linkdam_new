@@ -6,16 +6,17 @@
     </el-breadcrumb>
     <div class="content">
       <div class="list">
-        <div class="media-report" v-for="item in data" :key="item.id">
+        <div class="media-report" v-for="item in data" :key="item.id" @click="showDetail(item.id)">
           <div class="image" :style="{ backgroundImage: `url(${item.image})` }"></div>
           <div class="article">
             <div class="title ellipsis">{{item.title}}</div>
             <div class="desc hidden-md-and-down">{{item.description}}</div>
             <div class="time">{{timeTransfer(item.createDate, true)}}</div>
-            <el-button class="hidden-xs-only" type="plain" round size="mini">MORE ></el-button>
+            <el-button class="hidden-xs-only" type="plain" round size="mini" @click="showDetail(item.id)">MORE ></el-button>
           </div>
         </div>
       </div>
+      <rec-article></rec-article>
     </div>
   </div>
 </template>
@@ -23,9 +24,13 @@
 <script>
 import get from 'service/getData'
 import timeTransfer from 'service/timeTransfer'
+import recArticle from './rec-article';
 
 export default {
   name: 'media-list',
+  components: {
+    recArticle,
+  },
   data () {
     return {
       loading: false,
@@ -42,9 +47,12 @@ export default {
         this.loading = false;
       })
     },
-    getRecData() {
-      get().getRecommendMedia().then(res => {
-        this.recData = res.data.list;
+    showDetail(id) {
+      this.$router.push({
+        name: 'media-detail',
+        query: {
+          id,
+        },
       })
     },
     timeTransfer(time, simple) {
@@ -53,7 +61,6 @@ export default {
   },
   mounted() {
     this.getData()
-    this.getRecData()
   },
 }
 </script>
@@ -63,17 +70,16 @@ export default {
 @import './../../../style-sheets/mixin';
 
 .content {
+  * {
+    transition: all .3s ease;
+  }
   .list {
-    * {
-      transition: all .3s ease;
-    }
     .media-report {
       display: flex;
       margin: 20px 0;
-      border-radius: 10px;
       overflow: hidden;
       &:hover {
-        box-shadow: 0 0px 10px 1px rgba(52, 154, 255, 0.8);
+        box-shadow: 0 0px 20px 1px rgba(52, 154, 255, 0.8);
         cursor: pointer;
         .title {
           color: $theme-color;

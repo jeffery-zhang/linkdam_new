@@ -25,6 +25,7 @@ import pointsManage from 'page/user/components/points-manage'
 import pointsExchange from 'page/user/components/points-exchange'
 import media from 'page/media/media'
 import mediaList from 'page/media/components/media-list'
+import mediaDetail from 'page/media/components/media-detail'
 
 import download from 'page/download/download'
 
@@ -174,6 +175,11 @@ const router = new Router({
           path: '/media/list',
           name: 'media-list',
           component: mediaList,
+        },
+        {
+          path: '/media/detail',
+          name: 'media-detail',
+          component: mediaDetail,
         },
       ],
     },
