@@ -18,10 +18,13 @@
       </el-menu-item>
     </el-menu>
     <el-row v-if="!!promoCode" style="padding:40px 20px;border-bottom:1px solid #e6e6e6">
-      <el-col>
+      <el-col :md="9">
         <span>{{$t('USER.YOUR_CODE')}}</span>
         <strong style="font-size:20px;color: #FF0036">{{promoCode}}</strong>
         <p class="focus">{{$t('HEADER.PS')}}{{$t('POINTS.CODE_TIP')}}</p>
+      </el-col>
+      <el-col :md="9">
+        <span>{{$t('USER.YOUR_COMMISSION')}}{{commission}}DAM</span>
       </el-col>
     </el-row>
     <div class="sharing-copy">
@@ -58,6 +61,7 @@ export default {
       loading: false,
       page: 'promo-code-manage',
       promoCode: '',
+      commission: 0,
       price: 0,
       discountPrice: 0,
     }
@@ -70,6 +74,7 @@ export default {
         get().getPromoCode().then(res => {
           this.promoCode = res.data.promoCode;
           this.discountPrice = res.data.discountPercent * this.price;
+          this.commission = parseInt(res.data.commissionPointsPercent * this.price);
           this.loading = false;
         }).catch(err => {
           this.loading = false;

@@ -26,7 +26,7 @@
     "CANCEL_OK": "订单取消成功",
     "DELETE_OK": "订单删除成功",
     "YOUR_CODE": "您的折扣码: ",
-    "YOUR_COMMISSION": "您的佣金预计为: ",
+    "YOUR_COMMISSION": "您的返佣积分预计为: ",
     "COPY_TIP": "打开链接网站，并输入折扣码即可优惠购买链盾。"
   }
 }
