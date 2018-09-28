@@ -7,7 +7,7 @@
       <el-menu-item index="order-manage" >
         {{$t('USER.ORDER_MANAGE')}}
       </el-menu-item>
-      <el-menu-item index="promo-code-manage">
+      <el-menu-item index="promo-code-manage" v-show="!normalUser">
         {{$t('USER.PROMO_CODE_MANAGE')}}
       </el-menu-item>
       <el-menu-item index="points-manage">
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import get from 'service/getData'
 import timeTransfer from 'service/timeTransfer'
 
@@ -57,6 +58,7 @@ export default {
   name: 'points-manage',
   data () {
     return {
+      normalUser: Cookies.get('userType') == 1,
       loading: false,
       page: 'points-manage',
       allPoints: 0,

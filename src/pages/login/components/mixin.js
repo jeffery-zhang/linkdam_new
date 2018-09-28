@@ -55,6 +55,9 @@ const mixin = {
         Cookies.set('userId', data.userId, {
           expires: 1
         });
+        Cookies.set('userType', data.userPromoCode.type, {
+          expires: 1
+        });
         this[LOGIN_STATUS](true);
         this[USER_ACCOUNT](this.phone);
         const loginInfo = {
