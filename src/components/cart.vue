@@ -102,7 +102,7 @@ export default {
   data () {
     return {
       loading: false,
-      lang: localStorage.getItem('_lang'),
+      lang: localStorage.getItem('_lang') || 'zh-CN',
       products: [],
       fare: 0,
       remark: '',

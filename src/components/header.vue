@@ -98,7 +98,7 @@
         productRoute: {
           name: 'product',
         },
-        currentLang: localStorage.getItem('_lang') || 'en-US',
+        currentLang: localStorage.getItem('_lang') || 'zh-CN',
       }
     },
     computed: {
