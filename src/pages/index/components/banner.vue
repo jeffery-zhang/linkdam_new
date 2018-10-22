@@ -14,7 +14,7 @@ export default {
   name: 'banner',
   data () {
     return {
-      currLang: localStorage.getItem('_lang') || 'en-US',
+      currLang: localStorage.getItem('_lang') || 'zh-CN',
     }
   },
 }

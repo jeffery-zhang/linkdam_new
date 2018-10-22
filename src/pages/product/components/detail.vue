@@ -90,7 +90,7 @@ export default {
   data () {
     return {
       loading: false,
-      lang: localStorage.getItem('_lang'),
+      lang: localStorage.getItem('_lang') || 'zh-CN',
       product: {},
       pickedColor: '黑色',
       productId: 1,
