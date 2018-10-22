@@ -31,7 +31,7 @@ import points_cn from './zh-CN/points.json'
 Vue.use(VueI18n);
 
 export const i18n = new VueI18n({
-  locale: localStorage._lang || 'en-US',
+  locale: localStorage._lang || 'zh-CN',
   messages: {
     'zh-CN': Object.assign(
       header_cn,
